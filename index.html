@@ -1,0 +1,1049 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>山久 高山家の記録</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Shippori+Mincho+B1:wght@400;700&family=Zen+Kaku+Gothic+New:wght@400;500;700&display=swap">
+<style>
+:root{
+  --paper:#f3f4f0; --surface:#fbfbf9; --surface-2:#e9ebe5; --surface-3:#dfe2da;
+  --ink:#24272c; --ink-2:#565d67; --ink-3:#848b95;
+  --rule:#d5d8d0; --rule-2:#bfc4ba;
+  --ai:#2a4f8a; --ai-deep:#1b3560; --ai-soft:#dde6f2; --ai-line:#9db4d6;
+  --shu:#b4432e; --shu-soft:#f4e0da;
+  --stone:#a3a8ad; --stone-deep:#6f757c;
+  --focus:#2a4f8a;
+  color-scheme: light;
+}
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]){
+    --paper:#15181d; --surface:#1c2026; --surface-2:#242930; --surface-3:#2d333b;
+    --ink:#e8e6df; --ink-2:#b4b9c0; --ink-3:#7f868f;
+    --rule:#2e343b; --rule-2:#3d434b;
+    --ai:#8fb2e6; --ai-deep:#c5d7f3; --ai-soft:#212f45; --ai-line:#4d6a94;
+    --shu:#e2705a; --shu-soft:#46251f;
+    --stone:#6b7178; --stone-deep:#9aa1a8;
+    --focus:#8fb2e6;
+    color-scheme: dark;
+  }
+}
+:root[data-theme="dark"]{
+  --paper:#15181d; --surface:#1c2026; --surface-2:#242930; --surface-3:#2d333b;
+  --ink:#e8e6df; --ink-2:#b4b9c0; --ink-3:#7f868f;
+  --rule:#2e343b; --rule-2:#3d434b;
+  --ai:#8fb2e6; --ai-deep:#c5d7f3; --ai-soft:#212f45; --ai-line:#4d6a94;
+  --shu:#e2705a; --shu-soft:#46251f;
+  --stone:#6b7178; --stone-deep:#9aa1a8;
+  --focus:#8fb2e6;
+  color-scheme: dark;
+}
+*,*::before,*::after{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{
+  margin:0; background:var(--paper); color:var(--ink);
+  font-family:"Zen Kaku Gothic New","Hiragino Kaku Gothic ProN","Hiragino Sans","Yu Gothic","Meiryo",sans-serif;
+  font-size:16px; line-height:1.95; letter-spacing:.01em;
+  -webkit-font-smoothing:antialiased;
+}
+a{color:var(--ai);text-decoration-thickness:1px;text-underline-offset:.2em}
+a:hover{color:var(--ai-deep)}
+:focus-visible{outline:2px solid var(--focus);outline-offset:3px;border-radius:2px}
+h1,h2,h3,h4,.mincho{
+  font-family:"Shippori Mincho B1","Shippori Mincho","Hiragino Mincho ProN","Yu Mincho","YuMincho","MS PMincho",serif;
+  font-feature-settings:"palt";
+  font-weight:700; letter-spacing:.05em; line-height:1.4; text-wrap:balance;
+}
+h1{font-size:clamp(30px,6.2vw,46px);margin:.4em 0 .5em;letter-spacing:.08em}
+h2{font-size:clamp(23px,4vw,29px);margin:0 0 .8em}
+h3{font-size:20px;margin:2.2em 0 .7em}
+h4{font-size:17px;margin:1.8em 0 .5em}
+p{margin:0 0 1.1em}
+ul,ol{padding-left:1.4em;margin:0 0 1.1em}
+li{margin:.25em 0}
+strong{font-weight:700}
+small{font-size:.86em}
+hr{border:0;border-top:1px solid var(--rule);margin:2.5em 0}
+.wrap{max-width:42rem;margin:0 auto;padding:0 22px}
+.wide{max-width:62rem}
+.eyebrow{
+  font-size:12px;letter-spacing:.18em;color:var(--ink-2);font-weight:500;margin:0 0 .6em;
+}
+.eyebrow b{color:var(--ai);font-weight:700;margin-right:.7em;font-variant-numeric:tabular-nums}
+.muted{color:var(--ink-2)}
+.faint{color:var(--ink-3)}
+.num{font-variant-numeric:tabular-nums}
+
+/* 確度バッジ */
+.c{display:inline-block;font-size:11px;line-height:1;padding:3px 5px 2px;border-radius:2px;font-weight:700;
+   vertical-align:.12em;margin-left:.35em;letter-spacing:.05em;font-family:"Zen Kaku Gothic New",sans-serif}
+.c.k{background:var(--ai);color:var(--paper)}
+.c.n{border:1px solid var(--ai);color:var(--ai);padding:2px 4px 1px}
+.c.y{background:var(--shu);color:#fff}
+
+/* ナビ */
+.nav{position:sticky;top:0;z-index:20;background:var(--surface);border-bottom:1px solid var(--rule)}
+.nav .in{max-width:62rem;margin:0 auto;display:flex;align-items:center;gap:14px;padding:0 16px;height:48px}
+.nav .brand{display:flex;align-items:center;gap:8px;flex:none;color:var(--ink);text-decoration:none;font-size:14px;font-weight:700;letter-spacing:.08em}
+.nav .brand svg{width:22px;height:22px}
+.nav ul{list-style:none;margin:0;padding:0;display:flex;gap:2px;overflow-x:auto;scrollbar-width:none;-webkit-overflow-scrolling:touch}
+.nav ul::-webkit-scrollbar{display:none}
+.nav li{margin:0;flex:none}
+.nav a{display:block;padding:6px 9px;font-size:13px;color:var(--ink-2);text-decoration:none;border-radius:3px;white-space:nowrap}
+.nav a:hover{background:var(--surface-2);color:var(--ink)}
+
+/* ヒーロー */
+.hero{padding:56px 0 40px;border-bottom:1px solid var(--rule);background:linear-gradient(180deg,var(--surface) 0%,var(--paper) 100%)}
+.hero .yago{width:104px;height:120px;display:block;margin:0 0 14px}
+.hero .lead{font-size:17px;max-width:38rem;color:var(--ink);margin-bottom:1.6em}
+.facts{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:0;margin:0;border-top:1px solid var(--rule-2);border-bottom:1px solid var(--rule-2)}
+.facts div{padding:14px 14px 12px 0;border-right:1px solid var(--rule)}
+.facts div:last-child{border-right:0}
+.facts dt{font-size:12px;letter-spacing:.14em;color:var(--ink-2);margin:0 0 4px}
+.facts dd{margin:0;font-family:"Shippori Mincho B1","Hiragino Mincho ProN","Yu Mincho",serif;font-size:21px;font-weight:700;letter-spacing:.04em;line-height:1.3}
+.facts dd small{display:block;font-family:"Zen Kaku Gothic New",sans-serif;font-weight:400;font-size:12px;color:var(--ink-2);letter-spacing:.02em;margin-top:3px}
+
+section{padding:52px 0 8px;scroll-margin-top:60px}
+section + section{border-top:1px solid var(--rule)}
+.intro{font-size:17px}
+
+/* 要点3つ */
+.three{list-style:none;padding:0;margin:1.2em 0 0;counter-reset:pt;display:grid;gap:14px}
+.three li{margin:0;padding:18px 20px 16px;background:var(--surface);border:1px solid var(--rule);position:relative}
+.three li h3{margin:0 0 .35em;font-size:18px}
+.three li p{margin:0;font-size:15px;color:var(--ink-2)}
+
+/* 注記ボックス */
+.note{background:var(--surface-2);padding:14px 18px;font-size:14px;margin:1.4em 0;border-left:3px solid var(--rule-2)}
+.note.warn{border-left-color:var(--shu);background:var(--shu-soft)}
+.note p:last-child{margin-bottom:0}
+
+/* 系図 */
+.lineage{list-style:none;margin:1.6em 0 0;padding:0 0 0 34px;position:relative}
+.lineage::before{content:"";position:absolute;left:9px;top:12px;bottom:14px;width:2px;background:var(--ai)}
+.lineage > li{position:relative;margin:0 0 26px;padding:0}
+.lineage > li::before{content:"";position:absolute;left:-31px;top:9px;width:14px;height:14px;border-radius:50%;background:var(--paper);border:3px solid var(--ai)}
+.lineage > li.origin::before{background:var(--ai)}
+.lineage > li.gap::before{width:10px;height:10px;left:-29px;top:12px;border:2px solid var(--ai-line);background:var(--paper)}
+.lineage > li.gap{color:var(--ink-2);font-size:14px}
+.lineage ul li{margin:.2em 0}
+.lineage .gen{font-size:12px;letter-spacing:.16em;color:var(--ai);font-weight:700;display:block;margin-bottom:2px}
+.lineage .name{font-family:"Shippori Mincho B1","Hiragino Mincho ProN","Yu Mincho",serif;font-size:21px;font-weight:700;letter-spacing:.05em}
+.lineage .name small{font-family:"Zen Kaku Gothic New",sans-serif;font-size:13px;font-weight:400;color:var(--ink-2);letter-spacing:.02em;margin-left:.6em}
+.lineage .life{font-size:13px;color:var(--ink-2);margin:2px 0 4px}
+.lineage .kaimyo{font-size:13px;color:var(--ink-3);font-family:"Shippori Mincho B1",serif;letter-spacing:.08em}
+.lineage ul{margin:.3em 0 0;padding-left:1.1em;font-size:14px;color:var(--ink-2)}
+.lineage .branch{margin-top:8px;padding:10px 14px;border:1px dashed var(--rule-2);font-size:13.5px;color:var(--ink-2);background:var(--surface)}
+.lineage .branch b{color:var(--ink)}
+
+/* 年表 */
+.tl{list-style:none;margin:1.4em 0 0;padding:0}
+.tl li{display:grid;grid-template-columns:8.6rem 1fr;gap:0 18px;margin:0;padding:10px 0;border-top:1px solid var(--rule)}
+.tl li:last-child{border-bottom:1px solid var(--rule)}
+.tl .y{font-variant-numeric:tabular-nums;font-size:14px;color:var(--ink-2);line-height:1.6;padding-top:2px}
+.tl .y b{display:block;font-size:17px;color:var(--ink);font-family:"Shippori Mincho B1",serif;letter-spacing:.04em}
+.tl .e{font-size:15px}
+.tl .e b{font-weight:700}
+.tl .e small{display:block;color:var(--ink-2);font-size:13px;margin-top:2px}
+.tl li.era{border-top:0;padding:26px 0 6px}
+.tl li.era + li{border-top:1px solid var(--rule-2)}
+.tl li.era span{grid-column:1 / -1;font-size:12px;letter-spacing:.2em;color:var(--ai);font-weight:700}
+.tl li.hi .e b{color:var(--ai-deep)}
+.tl li.me .e{color:var(--ink-2)}
+@media (max-width:560px){
+  .tl li{grid-template-columns:1fr;gap:2px}
+  .tl .y b{display:inline;margin-right:.6em}
+}
+
+/* 表 */
+.tbl{overflow-x:auto;margin:1em 0 1.6em;-webkit-overflow-scrolling:touch}
+table{border-collapse:collapse;width:100%;font-size:14px;line-height:1.6;font-variant-numeric:tabular-nums}
+th,td{padding:8px 10px;text-align:left;vertical-align:top;border-bottom:1px solid var(--rule)}
+th{font-weight:700;font-size:12.5px;letter-spacing:.08em;color:var(--ink-2);border-bottom:1px solid var(--rule-2);white-space:nowrap}
+td.r,th.r{text-align:right}
+tr.sum td{font-weight:700;border-top:1px solid var(--rule-2);border-bottom:0}
+td .k{font-family:"Shippori Mincho B1",serif;letter-spacing:.06em}
+table.nw1 td:first-child,table.nw1 th:first-child{white-space:nowrap}
+table.wide-t{min-width:620px}
+td.nw{white-space:nowrap}
+caption{caption-side:top;text-align:left;font-size:13px;color:var(--ink-2);padding:0 0 8px}
+
+/* 文書引用 */
+.doc{background:var(--surface);border:1px solid var(--rule);padding:22px 24px;margin:1.4em 0;
+     font-family:"Shippori Mincho B1","Hiragino Mincho ProN","Yu Mincho",serif;font-size:15.5px;line-height:2.05;letter-spacing:.04em}
+.doc p{margin:0 0 .6em}
+.doc p:last-child{margin:0}
+.doc .sig{text-align:right;margin-top:1em}
+.doc .cap{font-family:"Zen Kaku Gothic New",sans-serif;font-size:12px;letter-spacing:.12em;color:var(--ink-2);margin-bottom:12px}
+.tate-wrap{overflow-x:auto;margin:1.4em 0;-webkit-overflow-scrolling:touch}
+.tate{writing-mode:vertical-rl;height:31rem;padding:26px 28px;background:var(--surface);border:1px solid var(--rule);
+      font-family:"Shippori Mincho B1","Hiragino Mincho ProN","Yu Mincho",serif;font-size:16px;line-height:2.3;letter-spacing:.1em;
+      display:inline-block;min-width:100%}
+.tate p{margin:0 0 0 1.2em}
+.tate .t{font-size:19px;font-weight:700;margin-left:1.6em}
+.tate .sig{margin-top:auto}
+
+/* 図版 */
+figure{margin:1.4em 0}
+figure.plate{background:var(--surface);border:1px solid var(--rule);padding:18px 18px 12px}
+figure.plate svg{width:100%;height:auto;display:block}
+figcaption{font-size:13px;color:var(--ink-2);margin-top:10px;line-height:1.7}
+.scroll{overflow-x:auto;-webkit-overflow-scrolling:touch}
+.scroll svg{min-width:640px}
+svg text{font-family:"Zen Kaku Gothic New","Hiragino Kaku Gothic ProN","Yu Gothic",sans-serif}
+svg .mn{font-family:"Shippori Mincho B1","Hiragino Mincho ProN","Yu Mincho",serif;font-weight:700}
+
+/* 家風6ヶ条 */
+.kafu{list-style:none;padding:0;margin:1.2em 0;display:grid;gap:10px}
+.kafu li{display:grid;grid-template-columns:2.2em 1fr;gap:10px;align-items:start;padding:12px 14px;background:var(--surface);border:1px solid var(--rule);margin:0}
+.kafu .n{font-family:"Shippori Mincho B1",serif;font-size:20px;font-weight:700;color:var(--ai);line-height:1.3}
+.kafu b{display:block}
+.kafu small{color:var(--ink-2);display:block;font-size:13.5px;line-height:1.7;margin-top:2px}
+
+/* 統計タイル */
+.stats{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin:1.2em 0 1.6em}
+@media (max-width:560px){.stats{grid-template-columns:1fr 1fr}.stats div:last-child{grid-column:1 / -1}}
+.stats div{background:var(--surface);border:1px solid var(--rule);padding:14px 16px 12px}
+.stats dt{font-size:12px;letter-spacing:.1em;color:var(--ink-2)}
+.stats dd{margin:2px 0 0;font-size:24px;font-weight:700;font-variant-numeric:tabular-nums;letter-spacing:.01em;line-height:1.3}
+.stats dd small{font-size:13px;font-weight:400;color:var(--ink-2);margin-left:.2em}
+
+/* 棒グラフ */
+.bars{margin:1em 0 .4em;font-variant-numeric:tabular-nums}
+.bars .row{display:grid;grid-template-columns:5.6em 1fr;align-items:center;gap:10px;height:28px}
+.bars .lab{font-size:13px;color:var(--ink-2);text-align:right}
+.bars .track{position:relative;height:100%;display:flex;align-items:center}
+.bars .bar{height:14px;background:var(--ai);border-radius:0 4px 4px 0;min-width:2px}
+.bars .row.other .bar{background:var(--stone)}
+.bars .val{font-size:13px;color:var(--ink);margin-left:8px;white-space:nowrap}
+.bars .val small{color:var(--ink-3)}
+.bars .axis{grid-column:2;height:1px;background:var(--rule-2);margin:2px 0 0}
+.chart-note{font-size:13px;color:var(--ink-2);margin:.6em 0 0}
+details{margin:1em 0}
+summary{cursor:pointer;font-size:14px;color:var(--ai);font-weight:500}
+
+/* 論点・チェックリスト */
+.issues{list-style:none;padding:0;margin:1.2em 0;counter-reset:iss}
+.issues li{position:relative;padding:14px 16px 12px 52px;border-top:1px solid var(--rule);margin:0}
+.issues li:last-child{border-bottom:1px solid var(--rule)}
+.issues li::before{counter-increment:iss;content:counter(iss);position:absolute;left:12px;top:14px;width:26px;height:26px;border:1px solid var(--rule-2);border-radius:50%;
+   display:grid;place-items:center;font-size:12px;color:var(--ink-2);font-variant-numeric:tabular-nums}
+.issues b{display:block;margin-bottom:2px}
+.issues p{margin:0;font-size:14.5px;color:var(--ink-2)}
+.check{list-style:none;padding:0;margin:.8em 0 1.2em}
+.check li{padding:6px 0 6px 30px;position:relative;margin:0;font-size:15px}
+.check li::before{content:"";position:absolute;left:2px;top:12px;width:15px;height:15px;border:1.5px solid var(--rule-2);border-radius:2px;background:var(--surface)}
+.cols{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:0 32px}
+
+/* 写真一覧 */
+.bundle{margin:1.6em 0 0}
+.bundle h4{margin:1.2em 0 .6em;display:flex;align-items:baseline;gap:10px}
+.bundle h4 small{font-weight:400;color:var(--ink-2);font-size:13px;font-family:"Zen Kaku Gothic New",sans-serif}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(150px,1fr));gap:12px;margin:0 0 1em}
+.ph{margin:0;font-size:12px;line-height:1.55}
+.ph .thumb{aspect-ratio:3/4;background:var(--surface-2);border:1px solid var(--rule);display:grid;place-items:center;overflow:hidden;position:relative}
+.ph .thumb img{width:100%;height:100%;object-fit:cover;display:block}
+.ph .thumb .ph-id{position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center;color:var(--ink-3);font-variant-numeric:tabular-nums;letter-spacing:.06em;font-size:13px;text-align:center;padding:10px}
+.ph .thumb .ph-id span{display:block;font-size:11px;letter-spacing:.02em;margin-top:6px}
+.ph .thumb.has img + .ph-id{display:none}
+.ph figcaption{margin-top:6px;color:var(--ink-2)}
+.ph figcaption b{color:var(--ink);font-weight:500;display:block;font-variant-numeric:tabular-nums}
+
+/* 今の山久 */
+.links{list-style:none;padding:0;margin:1.2em 0;display:grid;gap:12px}
+.links li{margin:0;padding:14px 16px;background:var(--surface);border:1px solid var(--rule)}
+.links a{font-weight:700;font-size:16px}
+.links p{margin:4px 0 0;font-size:14px;color:var(--ink-2)}
+.logo{display:block;max-width:190px;height:auto;margin:.4em 0 1em}
+.gloss{margin:1.2em 0}
+.gloss dt{font-weight:700;margin-top:.9em}
+.gloss dd{margin:0;color:var(--ink-2);font-size:15px}
+
+footer{padding:40px 0 56px;border-top:1px solid var(--rule);margin-top:40px;font-size:13px;color:var(--ink-2)}
+footer p{margin:0 0 .5em}
+.totop{display:inline-block;margin-top:1em}
+
+@media (max-width:560px){
+  .hero{padding:40px 0 30px}
+  .facts{grid-template-columns:1fr 1fr}
+  .facts div:nth-child(2n){border-right:0}
+  .facts div{padding-right:8px}
+  .facts dd{font-size:18px}
+  .doc{padding:18px 16px}
+  .tate{height:27rem;padding:20px}
+}
+@media print{
+  .nav{display:none}
+  body{background:#fff;color:#000;font-size:12px}
+  section{padding-top:24px}
+  figure.plate,.doc,.three li,.kafu li,.stats div,.links li{break-inside:avoid;border-color:#bbb}
+  .tbl{overflow:visible}
+  a{color:#000}
+}
+@media (prefers-reduced-motion:no-preference){
+  html{scroll-behavior:smooth}
+}
+</style>
+</head>
+<body>
+
+<nav class="nav" aria-label="目次">
+  <div class="in">
+    <a class="brand" href="#top" aria-label="ページの先頭へ">
+      <svg viewBox="0 0 100 116" aria-hidden="true"><path d="M8 46 L50 12 L92 46" fill="none" stroke="var(--ai)" stroke-width="9" stroke-linecap="round" stroke-linejoin="round"/><text class="mn" x="50" y="104" text-anchor="middle" font-size="60" fill="var(--ink)">久</text></svg>
+      山久 高山家の記録
+    </a>
+    <ul>
+      <li><a href="#youten">要点</a></li>
+      <li><a href="#kakei">家系</a></li>
+      <li><a href="#nenpyo">年表</a></li>
+      <li><a href="#iware">屋号と家風</a></li>
+      <li><a href="#iten">墓地移転</a></li>
+      <li><a href="#hoyo">三霊法要</a></li>
+      <li><a href="#bohimei">墓碑銘</a></li>
+      <li><a href="#kannondo">観音堂</a></li>
+      <li><a href="#ronten">確認したいこと</a></li>
+      <li><a href="#shashin">資料写真</a></li>
+      <li><a href="#ima">今の山久</a></li>
+      <li><a href="#yogo">用語</a></li>
+    </ul>
+  </div>
+</nav>
+
+<header class="hero" id="top">
+  <div class="wrap">
+    <svg class="yago" viewBox="0 0 100 116" role="img" aria-label="屋号 山久の印">
+      <path d="M8 46 L50 12 L92 46" fill="none" stroke="var(--ai)" stroke-width="8" stroke-linecap="round" stroke-linejoin="round"/>
+      <text class="mn" x="50" y="104" text-anchor="middle" font-size="60" fill="var(--ink)">久</text>
+    </svg>
+    <p class="eyebrow">川越 ・ 糸問屋「山久」 ・ 高山家</p>
+    <h1>山久 高山家の記録</h1>
+    <p class="lead">寛政五年（1793年）、川越に糸屋として暖簾分けしてから九代。家に残っていた紙資料36枚（祖父・七代目有和の手控え、父・八代目和明のレジュメ、長徳寺の報告書など）を読み解き、姉と共有するためにまとめた家の記録です。</p>
+    <dl class="facts">
+      <div><dt>創業</dt><dd>寛政5年<small>1793年・暖簾分け</small></dd></div>
+      <div><dt>当主</dt><dd>九代<small>2026年で233年</small></dd></div>
+      <div><dt>守っている寺</dt><dd>2ヶ寺<small>長徳寺・大蓮寺（昭和61年までは4ヶ寺）</small></dd></div>
+      <div><dt>もとになった資料</dt><dd>36枚<small>2007年・1986年・1986〜93年の3束</small></dd></div>
+    </dl>
+  </div>
+</header>
+
+<section id="youten">
+  <div class="wrap">
+    <p class="eyebrow"><b>1</b>はじめに</p>
+    <h2>まず知ってほしい三つのこと</h2>
+    <p class="intro">36枚の紙は、大きく三つの束に分かれます。平成19年に父が組合の昼食会で話すために作ったレジュメ、昭和61年に祖父が行った墓地移転の記録一式、そして同じ頃の法要と長徳寺観音堂の書類です。全体を読むと、次の三つがはっきりします。</p>
+    <ol class="three">
+      <li>
+        <h3>糸屋としては「日本で一番古い」と父は書いている</h3>
+        <p>初代は呉服屋「大山田」の丁稚から番頭になり、暖簾分けのとき主家と競合しないよう糸屋になった（寛政5年・1793年）。屋号は「高山久兵衛」ではなく「山田屋久兵衛」だから山久。父のレジュメには「糸屋、手芸屋、毛糸屋では日本で一番古い！！！」とある。</p>
+      </li>
+      <li>
+        <h3>昭和61年、祖父が4ヶ寺の墓を2ヶ寺に集約した</h3>
+        <p>それまで長徳寺・中院・観音寺・大蓮寺の4ヶ寺の墓を守っていたが、昭和61年（1986年）に中院と観音寺の墓を長徳寺へ移した。浩和が生まれる2年前の出来事で、今守っている長徳寺・大蓮寺の2ヶ寺と完全に一致する。「中院で墓を守った記憶がない」のは記憶違いではない。</p>
+      </li>
+      <li>
+        <h3>家訓はないが、家風はある</h3>
+        <p>父は「家訓はないが雰囲気（文化？）的なものがあるかも」として六項目を挙げた。その三つ目「社員を大切に」の根拠が、縁の絶えた他家の無縁墓を100年以上守り続けたこと。祖父の墓地移転と父の家風論が、ここでつながる。</p>
+      </li>
+    </ol>
+    <div class="note">
+      <p><strong>読むときの約束。</strong>この記録は写真からの読み取りで、原本の確定的な翻刻ではありません。手書きや崩し字が多く、読み違いが含まれます。確度を三段階で示します。<span class="c k">確</span>印刷文字か明瞭な手書きで疑いがない。<span class="c n">並</span>手書きだが文脈から高い確度で読める。<span class="c y">要</span>読み取りが不確かで、原本か写真での再確認が必要。金額・年号・戒名を外に出すときは、必ず原本にあたってください。</p>
+    </div>
+  </div>
+</section>
+
+<section id="kakei">
+  <div class="wrap">
+    <p class="eyebrow"><b>2</b>家の骨格</p>
+    <h2>初代から九代まで</h2>
+    <p>資料に名前が出てくるのは初代と五代目以降です。二代目から四代目の名は、この36枚には書かれていません。</p>
+    <ol class="lineage">
+      <li class="origin">
+        <span class="gen">本家</span>
+        <span class="name">大山田<small>呉服屋・今はない</small></span>
+        <p class="life">初代はここの丁稚から番頭になった。「お墓も知らない」と父のレジュメにある。同じ山田屋の系統に、山吉（呉服）、山周（小間物）、山新（服部民俗資料館）、山仁（太物問屋・高山仁兵衛・現在の山仁病院、山久の分家？）など。</p>
+      </li>
+      <li>
+        <span class="gen">初代</span>
+        <span class="name">山田屋久兵衛<small>久平</small></span>
+        <p class="life">寛政5年（1793年）、大山田から糸屋として暖簾分け。以前は縫糸中心で、早い段階で毛糸も扱った。</p>
+      </li>
+      <li class="gap">
+        <span class="gen">二代〜四代</span>
+        名は資料になし。観音寺の手洗石（天保3年・1832年頃、願主「南町 高山」）と、中院の墓（明治10年・1877年、「高山久兵衛 建之」）は、この間の当主の仕事と考えられる。
+      </li>
+      <li>
+        <span class="gen">五代目</span>
+        <span class="name">高山久兵衛<small>幼名 徳松</small></span>
+        <p class="life">昭和11年3月26日没・77才</p>
+        <p class="kaimyo">久遠院徳山寿昌居士</p>
+      </li>
+      <li>
+        <span class="gen">六代目</span>
+        <span class="name">高山久兵衛<small>幼名 和市</small></span>
+        <p class="life">昭和23年9月16日没・55才（父のレジュメでは昭和25年。戒名記録と墓碑銘は昭和23年）</p>
+        <p class="kaimyo">天眞院恭順和道居士</p>
+        <ul>
+          <li>川越市会議員、消防組合連合会長（お葬式に消防車で送迎）、戦後は埼玉県糸物組合理事長</li>
+          <li>芸者遊び、背中で三味線がひけた。政治も好き。仕入れ好き</li>
+          <li>妻 志け（永寿院守室妙繁大姉）昭和36年12月2日没・66才</li>
+        </ul>
+      </li>
+      <li>
+        <span class="gen">七代目</span>
+        <span class="name">高山久兵衛<small>幼名 有和</small></span>
+        <p class="life">大正7年3月9日生 〜 平成2年11月2日没・享年72才</p>
+        <ul>
+          <li>川越商業高校卒業後、東京の窪田商店で見習い。その後兵隊へ（幹部候補生で終戦大尉）</li>
+          <li>昭和23年に襲名、昭和26年に株式会社化して代表取締役社長。堅実で整理整頓がしっかりしていた</li>
+          <li>群馬への毛糸の販路拡大（スキー毛糸）、昭和31年に銀座通り商店街へ小売部、昭和47年に卸団地へ</li>
+          <li>川越ロータリークラブ会長、川越商工会議所監事、長徳寺檀徒総代</li>
+          <li><strong>昭和61年、4ヶ寺の墓を2ヶ寺に集約した本人</strong></li>
+        </ul>
+      </li>
+      <li>
+        <span class="gen">八代目</span>
+        <span class="name">高山和明</span>
+        <p class="life">昭和22年（1947年）生。昭和47年山久入社、平成2年に43才で社長就任</p>
+        <ul>
+          <li>横浜鶴見の同業サクライ（株）に住込で修業してから入社</li>
+          <li>川越青年会議所、日本JC経営開発委員会副委員長。手芸講習会でハマナカ・オリムパスなどを拡販</li>
+          <li>平成2年、シルクフラワーでドラッグストアへ。平成10年10月、楽天市場に出店（272番目の店舗）</li>
+          <li>平成19年、このレジュメを書く。「私が入社してからのことは（七代目が）かなり自由にやらせてくれた」</li>
+        </ul>
+        <div class="branch"><b>長男 浩和</b>（1988年5月9日生）は社長業を継がず日鉄物産に勤務。墓地移転はその2年前に終わっている。</div>
+      </li>
+      <li>
+        <span class="gen">九代目</span>
+        <span class="name">現社長<small>浩和の姉</small></span>
+        <p class="life">社長職を継承。継承の年は資料になし。</p>
+      </li>
+    </ol>
+  </div>
+</section>
+
+<section id="nenpyo">
+  <div class="wrap">
+    <p class="eyebrow"><b>3</b>年表</p>
+    <h2>1779年から2026年まで</h2>
+    <p>36枚に出てくる出来事を年順に並べました。中院の山田屋一家や観音寺の墓の年号も、家の歴史の一部として入れています。青字は家の節目、灰字は他家や周辺の出来事です。</p>
+    <ol class="tl">
+      <li class="era"><span>江戸</span></li>
+      <li class="me"><div class="y"><b>1776〜77</b>安永5〜6年</div><div class="e">観音寺の墓の三名 没（施主 伊勢屋）</div></li>
+      <li class="me"><div class="y"><b>1779</b>安永8年</div><div class="e">中院の山田屋一家・初代 山田屋長七 没（38才）<small>のちに山久が守ることになる無縁墓の、いちばん古い人</small></div></li>
+      <li class="hi"><div class="y"><b>1793</b>寛政5年</div><div class="e"><b>初代 山田屋久兵衛（久平）、大山田から糸屋として暖簾分け。山久のはじまり</b></div></li>
+      <li><div class="y"><b>1832</b>天保3年</div><div class="e">観音寺に手洗石を奉納。願主「南町 高山」<small>石の干支は「癸巳」で、本来は天保4年（1833年）。1年のずれは未解明</small></div></li>
+      <li class="me"><div class="y"><b>1834</b>天保5年</div><div class="e">観音寺の墓・雪岳道喜信士 没（丹波国船井郡本目村産、俗名 文右ヱ門）</div></li>
+      <li class="me"><div class="y"><b>1865</b>元治2年</div><div class="e">中院の山田屋一家・四代 斉藤治兵衛（37才）と二男（15才）が1ヶ月違いで没</div></li>
+      <li class="era"><span>明治 ・ 大正</span></li>
+      <li><div class="y"><b>1877</b>明治10年</div><div class="e">中院の山田屋一家・五代 斉藤治兵衛（東太郎）没、28才で家が絶える。<b>高山久兵衛が墓石を建てる</b><small>「山久で墓石を建ててお守りをしている。丁度109年になります」（昭和61年の口上書）</small></div></li>
+      <li class="me"><div class="y"><b>1901</b>明治34年</div><div class="e">商家スゴロクに山田屋一門（山吉、山周、山新、高山仁兵衛の山仁など）が載る</div></li>
+      <li><div class="y"><b>1918</b>大正7年3月9日</div><div class="e">七代目 有和 生まれる</div></li>
+      <li class="era"><span>昭和</span></li>
+      <li><div class="y"><b>1936</b>昭和11年3月26日</div><div class="e">五代目 徳松 没（77才）</div></li>
+      <li><div class="y"><b>1947</b>昭和22年</div><div class="e">八代目 和明 生まれる</div></li>
+      <li class="hi"><div class="y"><b>1948</b>昭和23年9月16日</div><div class="e"><b>六代目 和市 没（55才）。有和が七代目高山久兵衛を襲名</b></div></li>
+      <li class="hi"><div class="y"><b>1951</b>昭和26年6月</div><div class="e"><b>株式会社山久 設立。七代目が代表取締役社長に</b><small>設立月は現在の会社サイトの会社概要より</small></div></li>
+      <li><div class="y"><b>1956</b>昭和31年</div><div class="e">川越銀座通り商店街へ小売部を移転<small>墓碑銘の記述。レジュメでは「昭和30年頃」。小売は七代目の妻が担当</small></div></li>
+      <li><div class="y"><b>1961</b>昭和36年12月2日</div><div class="e">六代目の妻 志け 没（66才）</div></li>
+      <li><div class="y"><b>1972</b>昭和47年</div><div class="e">問屋町（卸団地）へ卸部進出。和明 25才で山久入社</div></li>
+      <li><div class="y"><b>1985</b>昭和60年3月</div><div class="e">長徳寺観音堂建設の会議はじまる<small>収支決算報告書の会議費の期間より</small></div></li>
+      <li class="hi"><div class="y"><b>1986</b>昭和61年9月16日</div><div class="e"><b>三霊合同法要（五代目・六代目・六代目妻）を長徳寺で。出席26名</b></div></li>
+      <li class="hi"><div class="y"><b>1986</b>昭和61年10月24日</div><div class="e"><b>中院と観音寺の墓を長徳寺へ移転（金曜・大安）</b><small>11月15日・21日案も残っており、実行日は確定できない</small></div></li>
+      <li><div class="y"><b>1988</b>昭和63年7月11日</div><div class="e">長徳寺観音堂 上棟式<small>同年5月9日、浩和 生まれる</small></div></li>
+      <li class="era"><span>平成 ・ 令和</span></li>
+      <li><div class="y"><b>1989</b>平成元年11月18日</div><div class="e">観音堂の仏具奉納</div></li>
+      <li class="hi"><div class="y"><b>1990</b>平成2年11月2日</div><div class="e"><b>七代目 有和 没（享年72才）。和明が43才で社長に</b><small>同年10月、観音堂に冷暖房装置を寄進。同年、シルクフラワーでドラッグストアへ</small></div></li>
+      <li><div class="y"><b>1993</b>平成5年</div><div class="e">長徳寺観音堂建設の収支決算（総額 5億4,375万9,152円）</div></li>
+      <li><div class="y"><b>1998</b>平成10年10月</div><div class="e">楽天市場に「シルクフラワーの山久」出店（272番目の店舗）</div></li>
+      <li><div class="y"><b>2000</b>平成12年1月</div><div class="e">楽天市場ショップオブザイヤー「アイデア賞」。「手芸の山久」も出店</div></li>
+      <li><div class="y"><b>2007</b>平成19年7月2日</div><div class="e">和明、組合員昼食会のレジュメを書く（束A）</div></li>
+      <li><div class="y"><b>年不詳</b></div><div class="e">姉が九代目として社長職を継ぐ</div></li>
+      <li><div class="y"><b>2026</b>令和8年8月31日</div><div class="e">浩和が36枚を撮影し、読み取り記録を作成</div></li>
+    </ol>
+  </div>
+</section>
+
+<section id="iware">
+  <div class="wrap">
+    <p class="eyebrow"><b>4</b>屋号と家風</p>
+    <h2>「山久」のいわれと、川越の商人たち</h2>
+    <p>父のレジュメ（平成19年）の2枚目は、卸団地にいる麻屋（麻友）、深屋（フカワ）、山田屋（山久）の三家の系譜です。川越には「×屋○助」を「×○」と略して呼ぶ風習がある、と父は書いています。</p>
+    <div class="tbl">
+      <table class="nw1 wide-t">
+        <caption>川越の屋号の略し方（父のレジュメより）<span class="c k">確</span></caption>
+        <thead><tr><th>屋号と名</th><th>略称</th><th>いま</th><th>備考</th></tr></thead>
+        <tbody>
+          <tr><td>山田屋 久兵衛</td><td class="k">山久</td><td>株式会社山久</td><td>本家は呉服屋の大山田。寛政5年に糸屋として暖簾分け</td></tr>
+          <tr><td>麻屋 友右門</td><td class="k">麻友</td><td>麻友</td><td>本家は綾部（麻屋利右門＝麻利）。綾部利右門は川越町長・初代市長。先祖は柿本人麻呂とされ、今も「人麻呂会」がある</td></tr>
+          <tr><td>深屋 和助</td><td class="k">深和</td><td>フカワビジネス</td><td>本家は深勘。ほかに深宇、深善など</td></tr>
+          <tr><td>山田屋 仁兵衛</td><td class="k">山仁</td><td>山仁病院</td><td>太物問屋。山久の分家？（父の記述に「？」あり）</td></tr>
+          <tr><td>山田屋 吉右衛門</td><td class="k">山吉</td><td>亀屋まえの建物</td><td>呉服商</td></tr>
+          <tr><td>山田屋 服部新助</td><td class="k">山新</td><td>服部民俗資料館</td><td>下駄・薬・傘</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p>父は川越商人の隆盛の「証拠」として二つを挙げています。大山阿夫利神社本殿横の大きな鋳物の天水桶に寄進した商人たちの名前が刻まれていること（製造は小川五郎右ヱ門。お台場の大砲も作った）。そして、熱海から海と川の水路で温泉を運ばせた記録に「綾部利右門は30桶？、高山久兵衛は6桶？」とあること。</p>
+
+    <h3>家訓はないが、雰囲気的なものがあるかも</h3>
+    <p>父が「山久に家訓はあるのか？」と自問して挙げた六項目です。</p>
+    <ol class="kafu">
+      <li><span class="n">一</span><div><b>糸屋だから細く長く地味に</b><small>「本当は昔は太かったかも？」と父の注記</small></div></li>
+      <li><span class="n">二</span><div><b>かつて、生糸相場で失敗したことがある</b></div></li>
+      <li><span class="n">三</span><div><b>社員を大切に</b><small>かつての社員を無縁仏で100年以上お守り（中院、観音寺）。石原町の観音寺の石の手洗いは高山久兵衛の寄進。この項が、次の章の墓地移転と直結する</small></div></li>
+      <li><span class="n">四</span><div><b>仕入れ先を粗末にしない</b></div></li>
+      <li><span class="n">五</span><div><b>人にコケにされても人をコケにするな</b></div></li>
+      <li><span class="n">六</span><div><b>すぐに自分の会社に入らないで同業者に見習いに行く</b><small>七代目は窪田商店へ、八代目はサクライ（株）へ。実際にそうしている</small></div></li>
+    </ol>
+    <p>同じレジュメには、イオンの岡田社長の言葉（流通の輪廻、グローカル企業）と、麻友の清水前会長の言葉が並んでいます。中でも「<strong>伝統とは革新の連続である</strong>」は、父が楽天出店やシルクフラワーに踏み出した理由の説明にもなっています。</p>
+  </div>
+</section>
+<section id="iten">
+  <div class="wrap">
+    <p class="eyebrow"><b>5</b>昭和61年（1986年）</p>
+    <h2>祖父が行った墓地の移転</h2>
+    <p class="intro">36枚のうち約24枚が、この一件の記録です。書類に西暦はありませんが、メモの「61.9.16.」、案内状の「昭和六十一年八月吉日」、そして書かれた曜日がすべて昭和61年と一致します。<span class="c k">確</span></p>
+  </div>
+  <div class="wrap wide">
+    <figure class="plate scroll">
+      <svg viewBox="0 0 740 336" role="img" aria-label="昭和61年の墓地移転。中院と観音寺の墓を長徳寺へ移し、4ヶ寺から2ヶ寺になった図">
+        <defs>
+          <marker id="arw" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="var(--ai)"/></marker>
+          <marker id="arw2" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="var(--rule-2)"/></marker>
+        </defs>
+        <g font-size="12" fill="var(--ink-2)" style="writing-mode:vertical-rl;text-orientation:upright" letter-spacing="2">
+          <text x="18" y="40">移転前</text>
+          <text x="18" y="246">移転後</text>
+        </g>
+        <g font-size="12" fill="var(--ink-2)">
+          <rect x="50" y="32" width="150" height="84" fill="var(--surface-2)" stroke="var(--rule-2)"/>
+          <text class="mn" x="125" y="58" text-anchor="middle" font-size="18" fill="var(--ink)">長徳寺</text>
+          <text x="125" y="80" text-anchor="middle">ご先祖の墓</text>
+          <text x="125" y="98" text-anchor="middle">護持会費 7,000円</text>
+
+          <rect x="225" y="32" width="150" height="84" fill="var(--ai-soft)" stroke="var(--ai-line)"/>
+          <text class="mn" x="300" y="58" text-anchor="middle" font-size="18" fill="var(--ink)">中院</text>
+          <text x="300" y="80" text-anchor="middle">山田屋一家の無縁墓 6基</text>
+          <text x="300" y="98" text-anchor="middle">109年お守り・20,000円</text>
+
+          <rect x="400" y="32" width="150" height="84" fill="var(--ai-soft)" stroke="var(--ai-line)"/>
+          <text class="mn" x="475" y="58" text-anchor="middle" font-size="18" fill="var(--ink)">観音寺</text>
+          <text x="475" y="80" text-anchor="middle">昔の店の人の墓 2基</text>
+          <text x="475" y="98" text-anchor="middle">152年お守り・5,600円</text>
+
+          <rect x="575" y="32" width="135" height="84" fill="var(--surface-2)" stroke="var(--rule-2)"/>
+          <text class="mn" x="642" y="58" text-anchor="middle" font-size="18" fill="var(--ink)">大蓮寺</text>
+          <text x="642" y="80" text-anchor="middle">ご先祖の墓</text>
+          <text x="642" y="98" text-anchor="middle">護持会費 6,000円</text>
+        </g>
+        <g stroke="var(--ai)" stroke-width="2" fill="none" marker-end="url(#arw)">
+          <path d="M300 116 L300 250"/>
+          <path d="M475 116 L475 250"/>
+        </g>
+        <g stroke="var(--rule-2)" stroke-width="2" fill="none" marker-end="url(#arw2)">
+          <path d="M125 116 L125 250"/>
+          <path d="M642 116 L642 250"/>
+        </g>
+        <rect x="212" y="140" width="352" height="82" fill="var(--surface)" stroke="var(--ai)" stroke-width="1.5"/>
+        <g font-size="12" fill="var(--ink-2)" text-anchor="middle">
+          <text x="388" y="162" fill="var(--ink)" font-weight="700">昭和61年10月24日（金・大安）</text>
+          <text x="388" y="181">各寺で「みたまぬき」→ 山崎石材が墓石を運ぶ</text>
+          <text x="388" y="198">→ 長徳寺で「みたま入れ」</text>
+          <text x="388" y="214" font-size="11">3ヶ寺とも天台宗。「その点よかった」と祖父</text>
+        </g>
+        <g font-size="12" fill="var(--ink-2)">
+          <rect x="50" y="258" width="500" height="64" fill="var(--surface-2)" stroke="var(--ai)" stroke-width="1.5"/>
+          <text class="mn" x="125" y="296" text-anchor="middle" font-size="18" fill="var(--ink)">長徳寺</text>
+          <text x="350" y="286" text-anchor="middle">ご先祖の墓に加えて、無縁墓地に中院6基＋観音寺2基を安置</text>
+          <text x="350" y="306" text-anchor="middle">「長徳寺の無縁墓地はそのままお守り下さい」</text>
+          <rect x="575" y="258" width="135" height="64" fill="var(--surface-2)" stroke="var(--rule-2)"/>
+          <text class="mn" x="642" y="296" text-anchor="middle" font-size="18" fill="var(--ink)">大蓮寺</text>
+        </g>
+      </svg>
+      <figcaption>4ヶ寺から2ヶ寺へ。護持会費は祖父のメモにある昭和61年当時の額。</figcaption>
+    </figure>
+  </div>
+  <div class="wrap">
+    <h3>なぜ移したのか<span class="c n">並</span></h3>
+    <p>祖父が寺へ持参した挨拶の下書きが残っています。要旨は次のとおりです。</p>
+    <div class="doc">
+      <p class="cap">寺への口上書（下書き）</p>
+      <p>一、いつもお世話様になって居ります。</p>
+      <p>二、大変永い間お世話様になりましたが、今日は私共がお世話している無縁墓地を長徳寺さんの方へ移させて頂きたいと思いまして伺い致しました。</p>
+      <p>三、現在、ご先祖のある長徳寺さんのほかに中院様、観音寺様、大蓮寺様の三ヶ寺、計四ヶ寺のお墓のお世話をさせて頂いて居りましたが、<strong>これからいつまでお世話を続けていけるかわかりませんので</strong>、長徳寺さんの方の墓地（無縁墓地）へ移してご先祖と一緒にお世話したいと思って居ります。</p>
+      <p>四、中院様の墓地は同じ山田屋の一家で、五代で子孫が絶えてしまったので山久で墓石を建ててお守りをしているわけです。丁度百九年になります。観音寺様は昔の功績のあったお店の人らしく、境内に手洗石が奉納してありますが百五十二年になります。大蓮寺様はうちのご先祖で、明文堂さんと油屋さんの間、今は駐車場になって居りますがそれがうちの方です。<span class="c y">要</span></p>
+      <p>五、今回は中院様と観音寺様の二ヶ寺を移転させて頂きたいと思います。<strong>たまたま同じ天台宗でございますので、その点よかったと思って居ります。</strong></p>
+    </div>
+    <p>「自分の代で守り切れなくなるかもしれない」という将来への不安から、墓を一か所にまとめた。今でいう改葬・墓じまいです。当時祖父は68才でした。</p>
+
+    <h3>準備したこと<span class="c n">並</span></h3>
+    <ul>
+      <li><strong>易断（占い）に相談</strong>。相談料10,000円。「お墓は50年以上経過すれば差支えない」との判断を得た。中院109年、観音寺154年でいずれも問題なし</li>
+      <li><strong>山崎石材に下見を依頼</strong>。中院・観音寺の墓石の寸法と個数、長徳寺で安置する場所の指図、移転費用の見積書</li>
+      <li>中院・観音寺には法要（お経料5万円）、山崎石材にはお骨または土を頂く作業</li>
+    </ul>
+
+    <h3>寺と話した内容<span class="c n">並</span></h3>
+    <p>寺で話すべきことが番号付きで整理されています。祖父の実務家ぶりがよく出ている紙です。</p>
+    <ul>
+      <li><strong>日取り</strong>。「墓地の移転は来る10月24日（金）が大安でよいと思いますが都合はいかがでしょうか」。観音寺に9時、中院に10時30分。当日は山崎石材にも来てもらい、お経をあげてもらってから墓石を移す</li>
+      <li><strong>お経料</strong>。「大蓮寺様のおばあちゃんが5万円でやって頂いたとの事ですので、大蓮寺様と同じにお願い致します」。欄外に「みたまぬき」と注記</li>
+      <li><strong>護持会費</strong>。中院から6万2千円の通知を受けたが、観音寺5,600円・大蓮寺6,000円・長徳寺7,000円を参考に示し、「無縁墓地で100年以上もお守りして居りますので、去年と同額の2万円でお願いしたい」<span class="c y">要</span></li>
+      <li><strong>観音寺</strong>。「昔のお店の人で墓石は2体、152年もたって居りますが3万円位いかがでしょうか」</li>
+      <li>確認事項。墓石を並べる順序と戒名は別紙のとおり。「みたまぬき」「みたま入れ」のお経料はいくらずつ包めばよいか。塔婆はどうなるか。墓守りの人への包み、しきび・お花・お線香は売ってもらえるか</li>
+      <li>長徳寺への依頼。「長徳寺の無縁墓地はそのままお守り下さい」「終了後、請求書をよろしくお願いします」</li>
+    </ul>
+
+    <h3>日程と費用<span class="c n">並</span></h3>
+    <div class="tbl">
+      <table class="nw1">
+        <caption>清書版「墓地の移転」の時刻表。10月24日（金）大安</caption>
+        <thead><tr><th>寺</th><th>時刻</th><th>備考</th></tr></thead>
+        <tbody>
+          <tr><td>観音寺</td><td>午前8時</td><td>「11時」に書き換えた跡。別メモでは9時</td></tr>
+          <tr><td>中院</td><td>午前10時30分</td><td>「9時」に書き換えた跡</td></tr>
+          <tr><td>長徳寺</td><td>午後3時</td><td>お経法要</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="note">
+      <p>別案として、中院 11月15日（土）10:00〜10:30（大安）、観音寺 11月21日（金）10:00〜10:30（大安）という日程も残っています。<strong>どちらで実行したかは、この36枚からは確定できません。</strong>清書版と口上書の双方が10月24日なので、それが最終案だった可能性が高いと見ています。</p>
+    </div>
+    <div class="tbl">
+      <table class="nw1">
+        <caption>お布施の計算（A案・合計239,000円。計算が完全に合致する）</caption>
+        <thead><tr><th>寺</th><th>内訳</th><th class="r">小計</th></tr></thead>
+        <tbody>
+          <tr><td>中院</td><td>「みたまぬき」お経料 50,000／石やまさや心付 3,000×2／中院墓掃除夫 3,000／護持会費 20,000</td><td class="r">79,000円</td></tr>
+          <tr><td>観音寺</td><td>「みたまぬき」お経料 30,000</td><td class="r">30,000円</td></tr>
+          <tr><td>長徳寺</td><td>中院6基＋観音寺2基の墓石移転お経料 50,000／塔婆 8本×3,000＝24,000／墓掃除夫 3,000／お花・線香 1,000／移転料 50,000（推定）</td><td class="r">130,000円</td></tr>
+          <tr class="sum"><td></td><td>計</td><td class="r">239,000円</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p class="muted" style="font-size:14px">別紙のB案（実施後の記録と思われる）では塔婆が13本×3,000円＝39,000円、山崎石材の人夫心付 2,000円×2など。どちらが計画でどちらが実施かは断定できません。</p>
+
+    <h3>移した墓の人たち</h3>
+    <h4>中院・山田屋の一家（6基・9名）<span class="c n">並</span></h4>
+    <p>屋号は同じ「山田屋」ですが、三代目までが山田屋姓、四代目からは斉藤姓に変わっています。四代目は元治2年7月8日に37才で、その二男は同年6月8日に15才で亡くなり、五代目も明治10年に28才で亡くなって家が絶えました。五代目の墓石だけに「高山久兵衛 建之」とあり、これが「109年お守りしてきた」の実体です。</p>
+    <div class="tbl">
+      <table class="nw1 wide-t">
+        <thead><tr><th>代</th><th>俗名</th><th>没年</th><th>年齢</th><th>戒名</th><th>施主</th></tr></thead>
+        <tbody>
+          <tr><td>初代</td><td>山田屋長七</td><td>安永8年（1779）</td><td class="nw">38才</td><td class="k">春山法光居士</td><td>—</td></tr>
+          <tr><td>初代妻</td><td>ふん</td><td>天明7年（1787）</td><td class="nw">37才</td><td class="k">秋岳妙広大姉</td><td>—</td></tr>
+          <tr><td>二代</td><td>山田屋治兵衛</td><td>文化11年（1814）</td><td class="nw">73才</td><td class="k">圓感實應居士</td><td>斎木萬助</td></tr>
+          <tr><td>二代妻</td><td>—</td><td>文政4年（1821）</td><td>—</td><td class="k">金縄妙界大姉</td><td>斎木萬助</td></tr>
+          <tr><td>三代</td><td>山田屋東多郎</td><td>嘉永4年（1851）</td><td class="nw">49才</td><td class="k">仁融弘寛居士</td><td>山田屋東多郎</td></tr>
+          <tr><td>三代妻</td><td>きん</td><td>弘化4年（1847）</td><td class="nw">35才</td><td class="k">真入妙園大姉</td><td>山田屋東多郎</td></tr>
+          <tr><td>四代 二男</td><td>斉藤治兵衛 二男</td><td>元治2年6月8日（1865）</td><td class="nw">15才</td><td class="k">遥領皓月信士</td><td>斉藤和吉</td></tr>
+          <tr><td>四代</td><td>斉藤治兵衛</td><td>元治2年7月8日（1865）</td><td class="nw">37才</td><td class="k">寶嚴淨幢居士</td><td>斉藤東多良</td></tr>
+          <tr><td>五代</td><td>斉藤治兵衛（俗名 東太郎）</td><td>明治10年（1877）</td><td class="nw">28才</td><td class="k">法山慈雲居士</td><td><strong>高山久兵衛 建之</strong></td></tr>
+        </tbody>
+      </table>
+    </div>
+    <h4>観音寺の墓（2基・4名）<span class="c n">並</span></h4>
+    <div class="tbl">
+      <table class="nw1">
+        <thead><tr><th>戒名</th><th>没年</th><th>備考</th></tr></thead>
+        <tbody>
+          <tr><td class="k">円山願応法子</td><td>安永6年（1777）</td><td>施主 伊勢屋</td></tr>
+          <tr><td class="k">圓月妙観信女</td><td>安永5年6月（1776）</td><td>施主 伊勢屋</td></tr>
+          <tr><td class="k">清因童子</td><td>安永5年11月（1776）</td><td>施主 伊勢屋</td></tr>
+          <tr><td class="k">雪岳道喜信士</td><td>天保5年（1834）</td><td>丹波国船井郡本目村産、俗名 文右ヱ門。施主 足立郡平方村 石川藤吉</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+  <div class="wrap wide">
+    <figure class="plate scroll">
+      <svg viewBox="0 0 760 232" role="img" aria-label="長徳寺での墓石の並べ方。右から左へ、中院の初代から五代、続いて観音寺の二基">
+        <text x="740" y="18" font-size="12" fill="var(--ink-2)" text-anchor="end">並べる順序　右から左へ</text>
+        <path d="M600 14 L520 14" stroke="var(--ai)" stroke-width="1.5" fill="none" marker-end="url(#arw)"/>
+        <g id="stones" fill="var(--surface-3)" stroke="var(--stone-deep)" stroke-width="1.2">
+          <path d="M652 168 L652 52 Q652 40 664 40 L718 40 Q730 40 730 52 L730 168 Z"/>
+          <path d="M562 168 L562 52 Q562 40 574 40 L628 40 Q640 40 640 52 L640 168 Z"/>
+          <path d="M472 168 L472 52 Q472 40 484 40 L538 40 Q550 40 550 52 L550 168 Z"/>
+          <path d="M382 168 L382 52 Q382 40 394 40 L448 40 Q460 40 460 52 L460 168 Z"/>
+          <path d="M292 168 L292 52 Q292 40 304 40 L358 40 Q370 40 370 52 L370 168 Z"/>
+          <path d="M202 168 L202 52 Q202 40 214 40 L268 40 Q280 40 280 52 L280 168 Z"/>
+          <path d="M112 168 L112 52 Q112 40 124 40 L178 40 Q190 40 190 52 L190 168 Z"/>
+          <path d="M22 168 L22 52 Q22 40 34 40 L88 40 Q100 40 100 52 L100 168 Z"/>
+        </g>
+        <rect x="14" y="168" width="724" height="12" fill="var(--stone)"/>
+        <g font-size="11" fill="var(--ink)" style="writing-mode:vertical-rl;text-orientation:upright" letter-spacing="1">
+          <text x="702" y="52">春山法光居士</text><text x="680" y="52">秋岳妙広大姉</text>
+          <text x="612" y="52">圓感實應居士</text><text x="590" y="52">金縄妙界大姉</text>
+          <text x="522" y="52">仁融弘寛居士</text><text x="500" y="52">真入妙園大姉</text>
+          <text x="421" y="52">遥領皓月信士</text>
+          <text x="331" y="52">寶嚴淨幢居士</text>
+          <text x="241" y="52">法山慈雲居士</text>
+          <text x="166" y="48" font-size="9.5">円山願応法子</text><text x="151" y="48" font-size="9.5">圓月妙観信女</text><text x="136" y="48" font-size="9.5">清因童子</text>
+          <text x="61" y="52">雪岳道喜信士</text>
+        </g>
+        <g font-size="11" fill="var(--ink-2)" text-anchor="middle">
+          <text x="691" y="30" fill="var(--ai)" font-weight="700">中院 初代</text>
+          <text x="601" y="30" fill="var(--ai)" font-weight="700">二代</text>
+          <text x="511" y="30" fill="var(--ai)" font-weight="700">三代</text>
+          <text x="421" y="30" fill="var(--ai)" font-weight="700">四代の二男</text>
+          <text x="331" y="30" fill="var(--ai)" font-weight="700">四代</text>
+          <text x="241" y="30" fill="var(--ai)" font-weight="700">五代</text>
+          <text x="151" y="30" fill="var(--ai)" font-weight="700">観音寺 三名合祀</text>
+          <text x="61" y="30" fill="var(--ai)" font-weight="700">観音寺</text>
+          <text x="691" y="198">長七・ふん</text>
+          <text x="601" y="198">治兵衛・妻</text>
+          <text x="511" y="198">東多郎・きん</text>
+          <text x="421" y="198">二男・15才</text>
+          <text x="331" y="198">斉藤治兵衛</text>
+          <text x="241" y="198">東太郎</text>
+          <text x="241" y="214" font-size="10">高山久兵衛 建之</text>
+          <text x="151" y="198">施主 伊勢屋</text>
+          <text x="61" y="198">文右ヱ門</text>
+        </g>
+      </svg>
+      <figcaption>祖父が残した配置図をもとに描き直したもの。夫婦は同じ墓石と推定して6基＋2基としています。実際の刻字や石の形は現地で確認してください。</figcaption>
+    </figure>
+  </div>
+  <div class="wrap">
+    <h4>観音寺の手洗石（移転対象ではないが記録されている）<span class="c n">並</span></h4>
+    <p>祖父のスケッチによれば、銘文は一面に「奉献　観音寺　高澤町」、別面に「天保三 癸巳 七月」「十二世 義誠代」、側面に「高山」「願主 南町」。父のレジュメの「石原町の観音寺の石の手洗いは高山久兵衛の寄進」はこの石を指します。天保3年（1832年）から数えて昭和61年で154年。なお「天保三年」と干支「癸巳」（天保4年）は一致せず、1年のずれの原因は未解明です。</p>
+
+    <h3>同じ紙に書かれていた、ほかの用件<span class="c n">並</span></h3>
+    <p>墓の交渉メモと同じ紙面に、日常と経営の用件が並んでいます。「10. 高山久兵衛を高山久平へ改名の方法」「11. クローバーあみ針セット（和明）」「12. ネクタイ、毛筆（銀座店）」「13. 大橋歯科 入れ歯 改良」。別紙の議題リストでは、1が墓地移転の件で、以下「和明 専務として出かける時は必ず行先をハッキリと告げていく事」「和明 土地の贈与」「銀座店 小売部対策 和明」「就業規則」「長徳寺墓地 改装・墓相研究」「吉沢部長 後任 販売」と続きます。<strong>墓の集約が、経営の議題リストの第1項として扱われていました。</strong></p>
+  </div>
+</section>
+
+<section id="hoyo">
+  <div class="wrap">
+    <p class="eyebrow"><b>6</b>昭和61年9月16日</p>
+    <h2>三霊合同法要</h2>
+    <p>墓地移転の1ヶ月前、祖父は五代目・六代目・六代目の妻の三霊をまとめて法要しています。9月16日は六代目の命日そのものです。</p>
+    <div class="doc">
+      <p class="cap">案内状（昭和61年8月吉日・高山久兵衛名）<span class="c n">並</span></p>
+      <p>拝啓　残暑なお厳しい折柄ますますご清栄の事とお慶び申上げます</p>
+      <p>さて来る九月十六日（火）に<br>亡祖父　久遠院徳山寿昌居士　五十四回忌<span class="c y">要</span><br>亡父　天眞院恭順和道居士　三十七回忌<br>亡母　永寿院守室妙繁大姉　二十七回忌<br>の法要を営みたく思ひます</p>
+      <p>尚、法要のあと故人にゆかりの深い山屋にて粗餐をさしあげたいと存じます</p>
+      <p>ご多忙中恐縮でございますが、当日午前十一時に長徳寺までお越し頂きます様ご案内申上げます</p>
+      <p class="sig">昭和六十一年八月吉日　高山久兵衛</p>
+    </div>
+    <div class="tbl">
+      <table>
+        <caption>当日メモ（61.9.16.）<span class="c n">並</span></caption>
+        <tbody>
+          <tr><th>集合</th><td>長徳寺 11時。山屋 13時、解散 15時30分</td></tr>
+          <tr><th>出席</th><td>江田大僧正（庵典）、江田昌応の2名。高山家ほか24名。計26名。欠席1名（小島茂、健康のため）</td></tr>
+          <tr><th>役割</th><td>施主挨拶 高山久兵衛／献杯挨拶 新井清平／故人思い出話の進行 高山（下の名は要確認）</td></tr>
+          <tr><th>回忌</th><td>当日メモでは五代目「50回忌」。案内状は「五十四回忌」とも読める。昭和11年没からは五十一回忌が数え上の慣行</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="doc">
+      <p class="cap">礼状（昭和61年10月1日・高山久兵衛名）<span class="c k">確</span></p>
+      <p>お彼岸も過ぎて漸々爽秋の季節となってまいりました　皆様には其後お元気でお過しの事と思います</p>
+      <p>過日の法事の節は大変お忙しい中をお出かけ頂き　お蔭様で無事、法要を営む事が出来ました事を厚く御礼申し上げます</p>
+      <p>故人も久し振りに元気な皆様にお会いしてさぞかし地下で喜んでいた事と思います</p>
+      <p>あの時の写真が出来てまいりましたのでお送りさせて頂きます</p>
+      <p>時節柄、皆様方の健勝とご自愛を祈って居ります</p>
+      <p class="sig">昭和六十一年十月一日　高山久兵衛</p>
+    </div>
+    <p class="muted" style="font-size:14px">礼状にある「あの時の写真」が家のどこかに残っていれば、この記録に加えたい一枚です。</p>
+  </div>
+</section>
+
+<section id="bohimei">
+  <div class="wrap">
+    <p class="eyebrow"><b>7</b>平成2年（1990年）</p>
+    <h2>七代目の墓碑銘</h2>
+    <p>祖父が亡くなったあと、父が石材店の山崎雅康さん宛に送った原稿です。推敲版、清書、最終版「墓石に」の計4枚があり、「小売部移転」を「拡張」に直してまた戻すなど、迷いの跡が見えます。最終文面を、石に刻まれたとおり縦書きで載せます。<span class="c k">確</span></p>
+  </div>
+  <div class="wrap wide">
+    <div class="tate-wrap">
+      <div class="tate">
+        <p class="t">墓石に</p>
+        <p>居士　幼名　有和、大正七年三月九日　六代目久兵衛の長男として生まれる。</p>
+        <p>昭和二十三年　六代目歿後、七代目高山久兵衛を襲名し「山久」を継承す。</p>
+        <p>昭和二十六年　株式会社に改め代表取締役社長となる。</p>
+        <p>温厚篤実にして家業に専心努力し、昭和三十一年　川越銀座通り商店街への小売部移転、昭和四十七年　問屋町への卸部進出など、山久の発展に貢献した。</p>
+        <p>川越ロータリークラブ会長、埼玉中央卸商団地副理事長、川越商工会議所監事、東京糸問屋組合組合員などの要職を歴任。</p>
+        <p>長徳寺檀徒総代として永く住職を補佐し、殊に観音堂建設など寺門の興隆発展に尽力した。</p>
+        <p>平成二年十一月二日　歿す　享年七十二才</p>
+      </div>
+    </div>
+  </div>
+  <div class="wrap">
+    <p>最後の一行「観音堂建設など寺門の興隆発展に尽力した」が、次の章につながります。</p>
+  </div>
+</section>
+
+<section id="kannondo">
+  <div class="wrap">
+    <p class="eyebrow"><b>8</b>昭和60年〜平成5年</p>
+    <h2>長徳寺 観音堂の建設</h2>
+    <p>祖父が檀徒総代として関わった観音堂建設の、奉納金の集計表と収支決算報告書が残っています。手書きの集計表は、電卓で検算すると小計・総計・人員のすべてが一致しました。<span class="c k">確</span></p>
+    <dl class="stats">
+      <div><dt>奉納した人</dt><dd>870<small>人</small></dd></div>
+      <div><dt>奉納金の総額</dt><dd>3億1,804<small>万円</small></dd></div>
+      <div><dt>建設の総収支</dt><dd>5億4,376<small>万円</small></dd></div>
+    </dl>
+    <h3>奉納金の分布（人数）</h3>
+    <div class="bars" role="img" aria-label="奉納金の額ごとの人数。30万円が358人で最多">
+      <div class="row"><span class="lab">30万円</span><span class="track"><span class="bar" style="width:100%" title="30万円 358人"></span><span class="val">358<small>人</small></span></span></div>
+      <div class="row"><span class="lab">50万円</span><span class="track"><span class="bar" style="width:36.3%" title="50万円 130人"></span><span class="val">130<small>人</small></span></span></div>
+      <div class="row"><span class="lab">10万円</span><span class="track"><span class="bar" style="width:22.6%" title="10万円 81人"></span><span class="val">81<small>人</small></span></span></div>
+      <div class="row"><span class="lab">70万円</span><span class="track"><span class="bar" style="width:16.8%" title="70万円 60人"></span><span class="val">60<small>人</small></span></span></div>
+      <div class="row"><span class="lab">20万円</span><span class="track"><span class="bar" style="width:15.1%" title="20万円 54人"></span><span class="val">54<small>人</small></span></span></div>
+      <div class="row"><span class="lab">5万円</span><span class="track"><span class="bar" style="width:12.3%" title="5万円 44人"></span><span class="val">44<small>人</small></span></span></div>
+      <div class="row"><span class="lab">100万円</span><span class="track"><span class="bar" style="width:8.9%" title="100万円 32人"></span><span class="val">32<small>人</small></span></span></div>
+      <div class="row"><span class="lab">15万円</span><span class="track"><span class="bar" style="width:8.7%" title="15万円 31人"></span><span class="val">31<small>人</small></span></span></div>
+      <div class="row other"><span class="lab">その他26口</span><span class="track"><span class="bar" style="width:22.3%" title="その他26種類の額 80人"></span><span class="val">80<small>人</small></span></span></div>
+      <div class="axis"></div>
+    </div>
+    <p class="chart-note">最高額は2,000万円が1人。30万円層だけで1億740万円になる。</p>
+    <details>
+      <summary>集計表の全34口を見る</summary>
+      <div class="tbl">
+        <table>
+          <thead><tr><th>奉納金</th><th class="r">人員</th><th class="r">金額（円）</th></tr></thead>
+          <tbody>
+            <tr><td>2,000万円</td><td class="r">1</td><td class="r">20,000,000</td></tr>
+            <tr><td>500万円</td><td class="r">1</td><td class="r">5,000,000</td></tr>
+            <tr><td>300万円</td><td class="r">1</td><td class="r">3,000,000</td></tr>
+            <tr><td>200万円</td><td class="r">3</td><td class="r">6,000,000</td></tr>
+            <tr><td>110万円</td><td class="r">1</td><td class="r">1,100,000</td></tr>
+            <tr><td>100万円</td><td class="r">32</td><td class="r">32,000,000</td></tr>
+            <tr><td>70万円</td><td class="r">60</td><td class="r">42,000,000</td></tr>
+            <tr><td>60万円</td><td class="r">1</td><td class="r">600,000</td></tr>
+            <tr><td>50万円</td><td class="r">130</td><td class="r">65,000,000</td></tr>
+            <tr><td>45万円</td><td class="r">1</td><td class="r">450,000</td></tr>
+            <tr><td>40万円</td><td class="r">4</td><td class="r">1,600,000</td></tr>
+            <tr><td>35万円</td><td class="r">6</td><td class="r">2,100,000</td></tr>
+            <tr><td>33万円</td><td class="r">1</td><td class="r">330,000</td></tr>
+            <tr><td>30万円</td><td class="r">358</td><td class="r">107,400,000</td></tr>
+            <tr><td>26万円</td><td class="r">1</td><td class="r">260,000</td></tr>
+            <tr><td>25万円</td><td class="r">9</td><td class="r">2,250,000</td></tr>
+            <tr><td>24万円</td><td class="r">2</td><td class="r">480,000</td></tr>
+            <tr class="sum"><td>左列 小計</td><td class="r">612</td><td class="r">289,570,000</td></tr>
+            <tr><td>23万円</td><td class="r">1</td><td class="r">230,000</td></tr>
+            <tr><td>22万円</td><td class="r">2</td><td class="r">440,000</td></tr>
+            <tr><td>20万円</td><td class="r">54</td><td class="r">10,800,000</td></tr>
+            <tr><td>18万円</td><td class="r">2</td><td class="r">360,000</td></tr>
+            <tr><td>16万円</td><td class="r">1</td><td class="r">160,000</td></tr>
+            <tr><td>15万円</td><td class="r">31</td><td class="r">4,650,000</td></tr>
+            <tr><td>13万円</td><td class="r">1</td><td class="r">130,000</td></tr>
+            <tr><td>11万円</td><td class="r">3</td><td class="r">330,000</td></tr>
+            <tr><td>10万円</td><td class="r">81</td><td class="r">8,100,000</td></tr>
+            <tr><td>9万円</td><td class="r">3</td><td class="r">270,000</td></tr>
+            <tr><td>7.5万円</td><td class="r">1</td><td class="r">75,000</td></tr>
+            <tr><td>6万円</td><td class="r">3</td><td class="r">180,000</td></tr>
+            <tr><td>5万円</td><td class="r">44</td><td class="r">2,200,000</td></tr>
+            <tr><td>3万円</td><td class="r">11</td><td class="r">330,000</td></tr>
+            <tr><td>2万円</td><td class="r">2</td><td class="r">40,000</td></tr>
+            <tr><td>1万円</td><td class="r">17</td><td class="r">170,000</td></tr>
+            <tr><td>5,000円</td><td class="r">1</td><td class="r">5,000</td></tr>
+            <tr class="sum"><td>右列 小計</td><td class="r">258</td><td class="r">28,470,000</td></tr>
+            <tr class="sum"><td>総計</td><td class="r">870</td><td class="r">318,040,000</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <p class="muted" style="font-size:13px">欄外にもう一つ「820」の丸囲みがあるが、何を指すかは不明。</p>
+    </details>
+
+    <h3>収支決算報告書<span class="c n">並</span></h3>
+    <div class="tbl">
+      <table>
+        <caption>収入の部（S63.3〜H5.7）。合計 543,759,152円</caption>
+        <thead><tr><th>項目</th><th class="r">金額（円）</th></tr></thead>
+        <tbody>
+          <tr><td>観音堂建設祖金、信徒奉納金</td><td class="r">318,040,000</td></tr>
+          <tr><td>利子</td><td class="r">8,458,211</td></tr>
+          <tr><td>上棟式祝金（S63.7.11）</td><td class="r">297,000</td></tr>
+          <tr><td>落慶式祝金</td><td class="r">1,363,000</td></tr>
+          <tr><td>仏具奉納金（H1.11.18）</td><td class="r">28,040,000</td></tr>
+          <tr><td>冷暖房装置寄進（H2.10.18〜23頃）</td><td class="r">20,255,000</td></tr>
+          <tr><td>賽銭等<span class="c y">要</span></td><td class="r">167,299,941</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="tbl">
+      <table>
+        <caption>支出の部。合計 543,759,152円（項目名は判読、金額は一部のみ）</caption>
+        <thead><tr><th>項目</th><th class="r">金額（円）</th></tr></thead>
+        <tbody>
+          <tr><td>会議費（総会・決算会議ほか、S60.3〜H5.10）</td><td class="r">2,595,282 ほか</td></tr>
+          <tr><td>工事費（土地・設計・土木・本工事）<span class="c y">要</span></td><td class="r">427,286,768</td></tr>
+          <tr><td>法要費（上棟式・落慶法要・遷座法要）<span class="c y">要</span></td><td class="r">30,954,834</td></tr>
+          <tr><td>仏具費<span class="c y">要</span></td><td class="r">66,514,010</td></tr>
+          <tr><td>什器・備品費</td><td class="r">—</td></tr>
+          <tr><td>冷暖房装置費</td><td class="r">20,255,000</td></tr>
+          <tr><td>印刷費<span class="c y">要</span></td><td class="r">3,714,500</td></tr>
+          <tr><td>儀式費<span class="c y">要</span></td><td class="r">2,653,620</td></tr>
+          <tr><td>雑費・その他<span class="c y">要</span></td><td class="r">588,462</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="note warn">
+      <p>収入の各項目を単純合計すると総額と数千円ずれます。個別金額の読み取りに誤りがあります。<strong>総額543,759,152円と奉納金318,040,000円の二つは、集計表との一致から確度が高い</strong>と考えています。末尾に「上記の通り報告申し上げます　長徳寺」とあります。</p>
+    </div>
+    <h3>着工の日取り「方位」メモ<span class="c y">要</span></h3>
+    <p>「62年 2/4 △」「63年 2/3」「1/6〜2/3 より（○印）」「10月 お寺 お礼 訪問 10/8〜11/5」などと書かれた紙があり、観音堂の着工時期を方位と日取りで選んでいたと読めます。墓地移転で易断に相談したのと同じ発想です。</p>
+  </div>
+</section>
+<section id="ronten">
+  <div class="wrap">
+    <p class="eyebrow"><b>9</b>資料間の食い違い</p>
+    <h2>二人で確認したいこと</h2>
+    <p>読み取りの段階で決めきれなかった点です。原本を見れば片づくものと、父の記憶に頼るしかないものがあります。</p>
+    <ol class="issues">
+      <li><b>六代目の没年と七代目の社長就任年</b><p>父のレジュメは昭和25年、祖父の戒名記録と父の墓碑銘は昭和23年9月16日。原資料に近い二つが一致するので昭和23年が正しい可能性が高い。社長就任は「家業の当主＝昭和23年」と「法人の代表取締役＝昭和26年」の区別と考えられる。</p></li>
+      <li><b>五代目の回忌</b><p>案内状は「五十四回忌」とも「五十回忌」とも読め、当日メモは「50回忌」。昭和11年没なら昭和61年は五十一回忌が数え上の慣行。</p></li>
+      <li><b>護持会費「6万2千円」の意味</b><p>中院からの請求額と読むか、4ヶ寺の合計と読むか。ただし別紙の4項目（6,000／5,600／7,000／20,000）を足しても38,600円で合わない。原本での再確認が必要。</p></li>
+      <li><b>移転を実行した日</b><p>10月24日案と、11月15日・21日案の2系統が残る。手書きの「24」は「26」とも読めるが、1986年10月26日は日曜で、書類の「金曜」と合うのは24日。</p></li>
+      <li><b>観音寺の所在</b><p>レジュメは「石原町の観音寺」、手洗石の願主は「南町 高山」、銘には「高澤町」。寺の所在地、願主の居所、別の寄進者が混じっている可能性がある。</p></li>
+      <li><b>大蓮寺の「長井家」の一件</b><p>浩和の記憶にある「大蓮寺で長井家の墓と知らずに移してしまい、良くなかったので戻した」という経緯は、この36枚には見当たらない。昭和61年の書類では大蓮寺は「うちのご先祖」として移転対象から外れているだけ。昭和61年より後の出来事か、別の書類にあると考えられる。</p></li>
+      <li><b>「高山久兵衛を高山久平へ改名の方法」</b><p>祖父のメモの10項にある。初代の名「久平」に戻そうとしたのか、その後どうなったのかは資料になし。</p></li>
+      <li><b>読めなかった1枚</b><p>紙の裏から透けた鏡文字の写真。長徳寺檀徒総代会名で出された埋葬料の改定通知に見えるが、すべて要検証。</p></li>
+    </ol>
+
+    <h3>存在するはずの別紙</h3>
+    <ul class="check">
+      <li>父のレジュメの P5（業界の情勢）、P6（山久の現状）、P7（今後の考え方）</li>
+      <li>同じレジュメの 資料1（大山阿夫利神社）、資料2（麻屋）、資料3（山久）</li>
+      <li>昭和61年に寺へ渡した「墓石を並べる順序」の清書</li>
+      <li>山崎石材の見積書・請求書</li>
+      <li>昭和61年の法要の写真（礼状で「お送りします」とあるもの）</li>
+    </ul>
+
+    <div class="cols">
+      <div>
+        <h3>現地で撮っておきたい写真</h3>
+        <ul class="check">
+          <li>長徳寺の無縁墓地。中院・観音寺から移した8基の墓石と、五代目の「高山久兵衛 建之」の刻字</li>
+          <li>長徳寺の観音堂</li>
+          <li>観音寺の手洗石。「奉献」「天保三 癸巳 七月」「願主 南町 高山」の各面</li>
+          <li>大蓮寺のご先祖の墓</li>
+          <li>大山阿夫利神社の天水桶に刻まれた寄進者の名（高山久兵衛の名があるか）</li>
+        </ul>
+      </div>
+      <div>
+        <h3>父に聞けること</h3>
+        <ul class="check">
+          <li>大蓮寺の長井家の一件はいつ、どういう経緯だったか</li>
+          <li>昭和61年の移転当日のこと。実行日は10月24日だったか</li>
+          <li>レジュメの P5〜P7 と資料1〜3はどこにあるか</li>
+          <li>二代目〜四代目の名前や、大山田・山仁との関係</li>
+          <li>九代目の継承年（この記録に入れたい）</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="shashin">
+  <div class="wrap">
+    <p class="eyebrow"><b>10</b>もとになった資料</p>
+    <h2>紙資料36枚の一覧</h2>
+    <p>浩和が撮影した36枚と、その内容です。写真ファイルとの対応は「アップロード順＝表示順」という前提での推定なので、ファイル名だけを根拠に断定する前に画像を開いて確認してください。同じフォルダの <code>photos</code> に写真を入れると、この欄に表示されます。</p>
+  </div>
+  <div class="wrap wide">
+    <div class="bundle"><h4>第1便<small>9枚</small></h4><div class="grid">
+      <figure class="ph"><div class="thumb"><img src="photos/IMG_2907.jpeg" alt="八代目和明 年表（P4）" loading="lazy"><div class="ph-id">IMG_2907<span>写真未収録</span></div></div><figcaption><b>IMG_2907.jpeg</b>八代目和明 年表（P4）<br><span class="faint">束A 平成19年レジュメ</span></figcaption></figure>
+      <figure class="ph"><div class="thumb"><img src="photos/IMG_2906.jpeg" alt="山久の歴史（P3、初代・5〜7代目）" loading="lazy"><div class="ph-id">IMG_2906<span>写真未収録</span></div></div><figcaption><b>IMG_2906.jpeg</b>山久の歴史（P3、初代・5〜7代目）<br><span class="faint">束A 平成19年レジュメ</span></figcaption></figure>
+      <figure class="ph"><div class="thumb"><img src="photos/IMG_2905.jpeg" alt="川越の商人たち（P2、麻屋・深屋・山田屋ほか）" loading="lazy"><div class="ph-id">IMG_2905<span>写真未収録</span></div></div><figcaption><b>IMG_2905.jpeg</b>川越の商人たち（P2、麻屋・深屋・山田屋ほか）<br><span class="faint">束A 平成19年レジュメ</span></figcaption></figure>
+      <figure class="ph"><div class="thumb"><img src="photos/IMG_2904.jpeg" alt="組合員昼食会レジュメ 表紙＋P1（平成19年7月2日）" loading="lazy"><div class="ph-id">IMG_2904<span>写真未収録</span></div></div><figcaption><b>IMG_2904.jpeg</b>組合員昼食会レジュメ 表紙＋P1（平成19年7月2日）<br><span class="faint">束A 平成19年レジュメ</span></figcaption></figure>
+      <figure class="ph"><div class="thumb"><img src="photos/IMG_2903.jpeg" alt="観音堂 建設奉納金 集計表" loading="lazy"><div class="ph-id">IMG_2903<span>写真未収録</span></div></div><figcaption><b>IMG_2903.jpeg</b>観音堂 建設奉納金 集計表<br><span class="faint">束C 法要・墓碑銘・観音堂</span></figcaption></figure>
+      <figure class="ph"><div class="thumb"><img src="photos/IMG_2902.jpeg" alt="長徳寺観音堂建設 収支決算報告書" loading="lazy"><div class="ph-id">IMG_2902<span>写真未収録</span></div></div><figcaption><b>IMG_2902.jpeg</b>長徳寺観音堂建設 収支決算報告書<br><span class="faint">束C 法要・墓碑銘・観音堂</span></figcaption></figure>
+      <figure class="ph"><div class="thumb"><img src="photos/IMG_2901.jpeg" alt="法要礼状（昭和61年10月1日）" loading="lazy"><div class="ph-id">IMG_2901<span>写真未収録</span></div></div><figcaption><b>IMG_2901.jpeg</b>法要礼状（昭和61年10月1日）<br><span class="faint">束C 法要・墓碑銘・観音堂</span></figcaption></figure>
+      <figure class="ph"><div class="thumb"><img src="photos/IMG_2900.jpeg" alt="七代目略歴（山崎雅康様宛・高山和明より）" loading="lazy"><div class="ph-id">IMG_2900<span>写真未収録</span></div></div><figcaption><b>IMG_2900.jpeg</b>七代目略歴（山崎雅康様宛・高山和明より）<br><span class="faint">束C 法要・墓碑銘・観音堂</span></figcaption></figure>
+      <figure class="ph"><div class="thumb"><img src="photos/IMG_2899.jpeg" alt="七代目略歴 清書" loading="lazy"><div class="ph-id">IMG_2899<span>写真未収録</span></div></div><figcaption><b>IMG_2899.jpeg</b>七代目略歴 清書<br><span class="faint">束C 法要・墓碑銘・観音堂</span></figcaption></figure>
+    </div></div>
+    <div class="bundle"><h4>第2便<small>18枚</small></h4><div class="grid">
+      <figure class="ph"><div class="thumb"><img src="photos/IMG_2898.jpeg" alt="「墓石に」最終版（七代目 墓碑銘）" loading="lazy"><div class="ph-id">IMG_2898<span>写真未収録</span></div></div><figcaption><b>IMG_2898.jpeg</b>「墓石に」最終版（七代目 墓碑銘）<br><span class="faint">束C 法要・墓碑銘・観音堂</span></figcaption></figure>
+      <figure class="ph"><div class="thumb"><img src="photos/IMG_2897.jpeg" alt="鏡文字の透け（埋葬料通知か。判読不能）" loading="lazy"><div class="ph-id">IMG_2897<span>写真未収録</span></div></div><figcaption><b>IMG_2897.jpeg</b>鏡文字の透け（埋葬料通知か。判読不能）<br><span class="faint">束C 法要・墓碑銘・観音堂</span></figcaption></figure>
+      <figure class="ph"><div class="thumb"><img src="photos/IMG_2896.jpeg" alt="七代目略歴 罫線推敲版" loading="lazy"><div class="ph-id">IMG_2896<span>写真未収録</span></div></div><figcaption><b>IMG_2896.jpeg</b>七代目略歴 罫線推敲版<br><span class="faint">束C 法要・墓碑銘・観音堂</span></figcaption></figure>
+      <figure class="ph"><div class="thumb"><img src="photos/IMG_2895.jpeg" alt="法要案内状（昭和61年8月吉日）" loading="lazy"><div class="ph-id">IMG_2895<span>写真未収録</span></div></div><figcaption><b>IMG_2895.jpeg</b>法要案内状（昭和61年8月吉日）<br><span class="faint">束C 法要・墓碑銘・観音堂</span></figcaption></figure>
+      <figure class="ph"><div class="thumb"><img src="photos/IMG_2894.jpeg" alt="法要礼状（昭和61年10月1日、別葉）" loading="lazy"><div class="ph-id">IMG_2894<span>写真未収録</span></div></div><figcaption><b>IMG_2894.jpeg</b>法要礼状（昭和61年10月1日、別葉）<br><span class="faint">束C 法要・墓碑銘・観音堂</span></figcaption></figure>
+      <figure class="ph"><div class="thumb"><img src="photos/IMG_2893.jpeg" alt="法要当日メモ（61.9.16.、出席者26名）" loading="lazy"><div class="ph-id">IMG_2893<span>写真未収録</span></div></div><figcaption><b>IMG_2893.jpeg</b>法要当日メモ（61.9.16.、出席者26名）<br><span class="faint">束C 法要・墓碑銘・観音堂</span></figcaption></figure>
+      <figure class="ph"><div class="thumb"><img src="photos/IMG_2892.jpeg" alt="戒名3名（五代目・六代目・六代目妻）の没年月日" loading="lazy"><div class="ph-id">IMG_2892<span>写真未収録</span></div></div><figcaption><b>IMG_2892.jpeg</b>戒名3名（五代目・六代目・六代目妻）の没年月日<br><span class="faint">束C 法要・墓碑銘・観音堂</span></figcaption></figure>
+      <figure class="ph"><div class="thumb"><img src="photos/IMG_2891.jpeg" alt="易断相談・各寺の御布施内訳" loading="lazy"><div class="ph-id">IMG_2891<span>写真未収録</span></div></div><figcaption><b>IMG_2891.jpeg</b>易断相談・各寺の御布施内訳<br><span class="faint">束B 昭和61年 墓地移転</span></figcaption></figure>
+      <figure class="ph"><div class="thumb"><img src="photos/IMG_2890.jpeg" alt="墓地移転 依頼メモ（観音寺9時／中院10時30分／長徳寺午後3時）" loading="lazy"><div class="ph-id">IMG_2890<span>写真未収録</span></div></div><figcaption><b>IMG_2890.jpeg</b>墓地移転 依頼メモ（観音寺9時／中院10時30分／長徳寺午後3時）<br><span class="faint">束B 昭和61年 墓地移転</span></figcaption></figure>
+      <figure class="ph"><div class="thumb"><img src="photos/IMG_2889.jpeg" alt="寺での確認事項 1〜5項" loading="lazy"><div class="ph-id">IMG_2889<span>写真未収録</span></div></div><figcaption><b>IMG_2889.jpeg</b>寺での確認事項 1〜5項<br><span class="faint">束B 昭和61年 墓地移転</span></figcaption></figure>
+      <figure class="ph"><div class="thumb"><img src="photos/IMG_2888.jpeg" alt="「10. お話ありがとうございました」" loading="lazy"><div class="ph-id">IMG_2888<span>写真未収録</span></div></div><figcaption><b>IMG_2888.jpeg</b>「10. お話ありがとうございました」<br><span class="faint">束B 昭和61年 墓地移転</span></figcaption></figure>
+      <figure class="ph"><div class="thumb"><img src="photos/IMG_2887.jpeg" alt="交渉メモ 6〜9項（日程・お経料・護持会費）" loading="lazy"><div class="ph-id">IMG_2887<span>写真未収録</span></div></div><figcaption><b>IMG_2887.jpeg</b>交渉メモ 6〜9項（日程・お経料・護持会費）<br><span class="faint">束B 昭和61年 墓地移転</span></figcaption></figure>
+      <figure class="ph"><div class="thumb"><img src="photos/IMG_2886.jpeg" alt="寺への口上書 1〜5項（いつもお世話様〜）" loading="lazy"><div class="ph-id">IMG_2886<span>写真未収録</span></div></div><figcaption><b>IMG_2886.jpeg</b>寺への口上書 1〜5項（いつもお世話様〜）<br><span class="faint">束B 昭和61年 墓地移転</span></figcaption></figure>
+      <figure class="ph"><div class="thumb"><img src="photos/IMG_2885.jpeg" alt="議題メモ 10〜14（改名の方法ほか）" loading="lazy"><div class="ph-id">IMG_2885<span>写真未収録</span></div></div><figcaption><b>IMG_2885.jpeg</b>議題メモ 10〜14（改名の方法ほか）<br><span class="faint">束B 昭和61年 墓地移転</span></figcaption></figure>
+      <figure class="ph"><div class="thumb"><img src="photos/IMG_2884.jpeg" alt="中院・観音寺 墓地移転の件（まとめ＋経営議題1〜9）" loading="lazy"><div class="ph-id">IMG_2884<span>写真未収録</span></div></div><figcaption><b>IMG_2884.jpeg</b>中院・観音寺 墓地移転の件（まとめ＋経営議題1〜9）<br><span class="faint">束B 昭和61年 墓地移転</span></figcaption></figure>
+      <figure class="ph"><div class="thumb"><img src="photos/IMG_2883.jpeg" alt="「永年墓守りをしてきたが無縁佛につき」1〜6項" loading="lazy"><div class="ph-id">IMG_2883<span>写真未収録</span></div></div><figcaption><b>IMG_2883.jpeg</b>「永年墓守りをしてきたが無縁佛につき」1〜6項<br><span class="faint">束B 昭和61年 墓地移転</span></figcaption></figure>
+      <figure class="ph"><div class="thumb"><img src="photos/IMG_2882.jpeg" alt="「方位」（観音堂 着工の日取り）" loading="lazy"><div class="ph-id">IMG_2882<span>写真未収録</span></div></div><figcaption><b>IMG_2882.jpeg</b>「方位」（観音堂 着工の日取り）<br><span class="faint">束C 法要・墓碑銘・観音堂</span></figcaption></figure>
+      <figure class="ph"><div class="thumb"><img src="photos/IMG_2881.jpeg" alt="お布施計算（計239,000円）" loading="lazy"><div class="ph-id">IMG_2881<span>写真未収録</span></div></div><figcaption><b>IMG_2881.jpeg</b>お布施計算（計239,000円）<br><span class="faint">束B 昭和61年 墓地移転</span></figcaption></figure>
+    </div></div>
+    <div class="bundle"><h4>第3便<small>9枚</small></h4><div class="grid">
+      <figure class="ph"><div class="thumb"><img src="photos/IMG_2880.jpeg" alt="観音寺 戒名一覧（円山願応法子ほか）" loading="lazy"><div class="ph-id">IMG_2880<span>写真未収録</span></div></div><figcaption><b>IMG_2880.jpeg</b>観音寺 戒名一覧（円山願応法子ほか）<br><span class="faint">束B 昭和61年 墓地移転</span></figcaption></figure>
+      <figure class="ph"><div class="thumb"><img src="photos/IMG_2879.jpeg" alt="観音寺 手洗石スケッチ（奉献・天保三 癸巳 七月）" loading="lazy"><div class="ph-id">IMG_2879<span>写真未収録</span></div></div><figcaption><b>IMG_2879.jpeg</b>観音寺 手洗石スケッチ（奉献・天保三 癸巳 七月）<br><span class="faint">束B 昭和61年 墓地移転</span></figcaption></figure>
+      <figure class="ph"><div class="thumb"><img src="photos/IMG_2878.jpeg" alt="観音寺 戒名 枠書き（墓石の刻字レイアウト）" loading="lazy"><div class="ph-id">IMG_2878<span>写真未収録</span></div></div><figcaption><b>IMG_2878.jpeg</b>観音寺 戒名 枠書き（墓石の刻字レイアウト）<br><span class="faint">束B 昭和61年 墓地移転</span></figcaption></figure>
+      <figure class="ph"><div class="thumb"><img src="photos/IMG_2877.jpeg" alt="観音寺 戒名一覧（別葉）" loading="lazy"><div class="ph-id">IMG_2877<span>写真未収録</span></div></div><figcaption><b>IMG_2877.jpeg</b>観音寺 戒名一覧（別葉）<br><span class="faint">束B 昭和61年 墓地移転</span></figcaption></figure>
+      <figure class="ph"><div class="thumb"><img src="photos/IMG_2876.jpeg" alt="中院 墓石の並べ方 指図" loading="lazy"><div class="ph-id">IMG_2876<span>写真未収録</span></div></div><figcaption><b>IMG_2876.jpeg</b>中院 墓石の並べ方 指図<br><span class="faint">束B 昭和61年 墓地移転</span></figcaption></figure>
+      <figure class="ph"><div class="thumb"><img src="photos/IMG_2875.jpeg" alt="中院 山田屋一家 世代表（初代〜五代）" loading="lazy"><div class="ph-id">IMG_2875<span>写真未収録</span></div></div><figcaption><b>IMG_2875.jpeg</b>中院 山田屋一家 世代表（初代〜五代）<br><span class="faint">束B 昭和61年 墓地移転</span></figcaption></figure>
+      <figure class="ph"><div class="thumb"><img src="photos/IMG_2874.jpeg" alt="中院 四代・五代 戒名 枠書き" loading="lazy"><div class="ph-id">IMG_2874<span>写真未収録</span></div></div><figcaption><b>IMG_2874.jpeg</b>中院 四代・五代 戒名 枠書き<br><span class="faint">束B 昭和61年 墓地移転</span></figcaption></figure>
+      <figure class="ph"><div class="thumb"><img src="photos/IMG_2873.jpeg" alt="中院 初代〜三代 戒名 枠書き" loading="lazy"><div class="ph-id">IMG_2873<span>写真未収録</span></div></div><figcaption><b>IMG_2873.jpeg</b>中院 初代〜三代 戒名 枠書き<br><span class="faint">束B 昭和61年 墓地移転</span></figcaption></figure>
+      <figure class="ph"><div class="thumb"><img src="photos/IMG_2872.jpeg" alt="墓地の移転（10月24日 金 大安、時刻表）" loading="lazy"><div class="ph-id">IMG_2872<span>写真未収録</span></div></div><figcaption><b>IMG_2872.jpeg</b>墓地の移転（10月24日 金 大安、時刻表）<br><span class="faint">束B 昭和61年 墓地移転</span></figcaption></figure>
+    </div></div>
+  </div>
+</section>
+
+<section id="ima">
+  <div class="wrap">
+    <p class="eyebrow"><b>11</b>2026年</p>
+    <h2>今の山久</h2>
+    <p>初代が糸屋として暖簾分けした山久は、今も川越で続いています。会社サイトの会社概要には「創業 寛政5年（1793年）、会社設立 昭和26年6月」とあり、この記録の年表と一致します。経営理念は「手づくりの楽しさ・あたたかさを伝え、くらしに彩りを届けます。」</p>
+    <img class="logo" alt="手芸の山久 Hand Craft Yamakyu のロゴ" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAARAAAABsCAYAAACine0bAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAydpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDcuMS1jMDAwIDc5LmIwZjhiZTkwLCAyMDIxLzEyLzE1LTIxOjI1OjE1ICAgICAgICAiPiA8cmRmOlJERiB4bWxuczpyZGY9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkvMDIvMjItcmRmLXN5bnRheC1ucyMiPiA8cmRmOkRlc2NyaXB0aW9uIHJkZjphYm91dD0iIiB4bWxuczp4bXA9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC8iIHhtbG5zOnhtcE1NPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvbW0vIiB4bWxuczpzdFJlZj0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL3NUeXBlL1Jlc291cmNlUmVmIyIgeG1wOkNyZWF0b3JUb29sPSJBZG9iZSBQaG90b3Nob3AgMjMuMiAoTWFjaW50b3NoKSIgeG1wTU06SW5zdGFuY2VJRD0ieG1wLmlpZDozRUQ4OTA3REI0N0IxMUVDODFEQjg2NDMxQTczNTM3QyIgeG1wTU06RG9jdW1lbnRJRD0ieG1wLmRpZDozRUQ4OTA3RUI0N0IxMUVDODFEQjg2NDMxQTczNTM3QyI+IDx4bXBNTTpEZXJpdmVkRnJvbSBzdFJlZjppbnN0YW5jZUlEPSJ4bXAuaWlkOjNFRDg5MDdCQjQ3QjExRUM4MURCODY0MzFBNzM1MzdDIiBzdFJlZjpkb2N1bWVudElEPSJ4bXAuZGlkOjNFRDg5MDdDQjQ3QjExRUM4MURCODY0MzFBNzM1MzdDIi8+IDwvcmRmOkRlc2NyaXB0aW9uPiA8L3JkZjpSREY+IDwveDp4bXBtZXRhPiA8P3hwYWNrZXQgZW5kPSJyIj8+kDIhGAAAXOxJREFUeNrs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">
+    <ul class="links">
+      <li><a href="https://yama9.com/" target="_blank" rel="noopener">手芸の山久（yama9.com）</a><p>本社は川越の卸団地（川越バンテアン）。ソーイング材料、毛糸、手芸材料の卸・小売・メーカー。約1万点。平成12年に楽天市場へ出店した「手芸の山久」の流れ。</p></li>
+      <li><a href="https://www.yama9-silkflower.com/" target="_blank" rel="noopener">シルクフラワーの山久（yama9-silkflower.com）</a><p>父が平成2年に始めたシルクフラワー事業。胡蝶蘭の鉢植え、お榊、樒、開店祝いなど。平成10年、楽天市場の272番目の店舗として出店したのがこちら。</p></li>
+      <li><a href="https://www.koedo.com/yamakyu/" target="_blank" rel="noopener">毛糸・手芸・ソーイング用品の店 山久 小売部（koedo.com）</a><p>埼玉県川越市仲町1-9、川越商工会議所の隣、大正浪漫夢通り商店街内。昭和31年に銀座通り商店街へ移した小売部の今の姿。水曜定休。</p></li>
+    </ul>
+    <p class="muted" style="font-size:14px">ロゴは yama9.com より。サイト内容は2026年9月2日に確認。</p>
+  </div>
+</section>
+
+<section id="yogo">
+  <div class="wrap">
+    <p class="eyebrow"><b>12</b>用語</p>
+    <h2>この記録に出てくる言葉</h2>
+    <dl class="gloss">
+      <dt>みたまぬき（御魂抜き）</dt><dd>墓石から魂を抜く法要。墓を移す・処分する前に行う。閉眼供養ともいう。</dd>
+      <dt>みたま入れ（御魂入れ）</dt><dd>新しい場所に安置した墓石に魂を入れる法要。開眼供養。</dd>
+      <dt>護持会費</dt><dd>檀家が寺の維持のために毎年納める会費。</dd>
+      <dt>檀徒総代</dt><dd>檀家の代表者。寺の運営を住職とともに担う役。七代目が長徳寺で務めた。</dd>
+      <dt>無縁墓（無縁仏）</dt><dd>継承者がいなくなった墓・故人。山久が縁もない他家の無縁墓を100年以上守り続けていた点が特異。</dd>
+      <dt>易断</dt><dd>日取りや方位の吉凶を占うこと。改葬の可否と着工時期の判断に使われている。</dd>
+      <dt>大安</dt><dd>六曜の一つ。何をするにも吉とされる日。</dd>
+      <dt>暖簾分け</dt><dd>奉公人が独立する際、主家が屋号の使用を許すこと。初代は「主家と競合しない業種を選ぶ」条件で糸屋になった。</dd>
+      <dt>太物</dt><dd>綿織物・麻織物のこと。絹を扱う呉服に対する語。山仁は太物問屋。</dd>
+      <dt>塔婆</dt><dd>供養のために墓に立てる細長い板。昭和61年の移転では8本または13本を立てた。</dd>
+    </dl>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <p>もとになった読み取り記録：2026年8月31日作成（髙山浩和撮影の紙資料36枚をAIが読み取って整理したもの）。このページは2026年9月2日に作成。</p>
+    <p>写真からの読み取りであり、原本の翻刻ではありません。金額・年号・戒名を引用するときは原本にあたってください。</p>
+    <a class="totop" href="#top">ページの先頭へ</a>
+  </div>
+</footer>
+<script>
+(function(){
+  var imgs=document.querySelectorAll('.ph .thumb img');
+  for(var i=0;i<imgs.length;i++){
+    imgs[i].addEventListener('load',function(){this.parentNode.classList.add('has');});
+    imgs[i].addEventListener('error',function(){this.parentNode.removeChild(this);});
+    if(imgs[i].complete&&imgs[i].naturalWidth>0){imgs[i].parentNode.classList.add('has');}
+  }
+})();
+</script>
+
+</body>
+</html>
