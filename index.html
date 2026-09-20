@@ -193,7 +193,8 @@ figure.plate{background:var(--surface);border:1px solid var(--rule);padding:18px
 figure.plate svg{width:100%;height:auto;display:block}
 figcaption{font-size:13px;color:var(--ink-2);margin-top:10px;line-height:1.7}
 .scroll{overflow-x:auto;-webkit-overflow-scrolling:touch}
-.scroll svg{min-width:640px}
+.scroll svg{min-width:600px}
+figure.plate.scroll{padding-left:10px;padding-right:10px}
 svg text{font-family:"Zen Kaku Gothic New","Hiragino Kaku Gothic ProN","Yu Gothic",sans-serif}
 svg .mn{font-family:"Shippori Mincho B1","Hiragino Mincho ProN","Yu Mincho",serif;font-weight:700}
 
@@ -360,13 +361,17 @@ footer p{margin:0 0 .5em}
 <section id="youten">
   <div class="wrap">
     <p class="eyebrow"><b>1</b>はじめに</p>
-    <h2>まず知ってほしい四つのこと</h2>
-    <p class="intro">はじまりは、家に残っていた紙資料36枚でした。平成19年に父が組合の昼食会で話すために作ったレジュメ、昭和61年に祖父が行った墓地移転の記録一式、そして法要と長徳寺観音堂の書類。そこへ、家系図、実物の糸巻き、大蓮寺がくださった過去帳の照合表、郷土誌の記事が加わって、いま読める形になりました。<strong>全体を通して、次の四つがはっきりします。</strong></p>
+    <h2>まず知ってほしい五つのこと</h2>
+    <p class="intro">はじまりは、家に残っていた紙資料36枚でした。平成19年に父が組合の昼食会で話すために作ったレジュメ、昭和61年に祖父が行った墓地移転の記録一式、そして法要と長徳寺観音堂の書類。そこへ、家系図、実物の糸巻き、大蓮寺がくださった過去帳の照合表、郷土誌の記事が加わって、いま読める形になりました。<strong>全体を通して、次の五つがはっきりします。</strong></p>
 
     <ol class="three">
       <li>
         <h3>糸屋としては「日本で一番古い」と父は書いている</h3>
         <p>髙山家は呉服屋「大山田」の丁稚から番頭になり、暖簾分けのとき主家と競合しないよう糸屋になった（寛政5年・1793年）。屋号は「髙山久兵衛」ではなく「山田屋久兵衛」だから山久。父のレジュメには「糸屋、手芸屋、毛糸屋では日本で一番古い！！！」とある。<small>父のレジュメは「初代」の仕事と書くが、家系図では創業時の当主は二代目にあたる（<a href="#kakei">2 家の骨格</a>）。</small></p>
+      </li>
+      <li>
+        <h3>九代のうち三代は、よそから来た人</h3>
+        <p>家祖は宿川岸の髙山五平治家の生まれ。二代目は高麗郡平塚村の時田家、三代目は比企郡明覚村の岡野家から入っている。<strong>血のつながりは少なくとも二度切れていて、切れずに続いたのは屋号と家業と墓だけ。</strong>江戸の商家にとって「家」とは血統ではなく、その束のことだった。<small>当主が代々「久兵衛」を襲名したのも同じ理屈（<a href="#ie">3 家のしくみ</a>）。</small></p>
       </li>
       <li>
         <h3>昭和61年、祖父が4ヶ寺の墓を2ヶ寺に集約した</h3>
@@ -392,6 +397,77 @@ footer p{margin:0 0 .5em}
     <p class="eyebrow"><b>2</b>家の骨格</p>
     <h2>初代から九代まで</h2>
     <p>36枚の紙資料に名前が出てくるのは、初代と五代目以降だけでした。あいだの二代目から四代目は長らく空欄でしたが、別に残っていた<b>手書きの家系図</b>で名前・出身・没年が埋まりました（この節の下に接写があります）。</p>
+    <figure class="plate scroll">
+      <svg viewBox="0 0 880 380" role="img" aria-label="1700年から2026年までの帯図。家祖から九代目までの在世期間と、永井家の大蓮寺への埋葬期間1717年から1802年を並べ、寛政5年1793年の創業の線を引いたもの">
+        <defs>
+          <marker id="bar-ar" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="5" markerHeight="5" orient="auto-start-reverse">
+            <path d="M0 0 L10 5 L0 10 z" fill="var(--ai)"/>
+          </marker>
+        </defs>
+
+        <text x="329" y="14" text-anchor="middle" font-size="13.5" fill="var(--ai-deep)" font-weight="700">寛政5年（1793）山久 創業</text>
+
+        <g font-size="12.5" fill="var(--ink-3)" text-anchor="middle">
+          <text x="120" y="31">1700</text><text x="232" y="31">1750</text><text x="344" y="31">1800</text>
+          <text x="456" y="31">1850</text><text x="569" y="31">1900</text><text x="681" y="31">1950</text><text x="793" y="31">2000</text>
+        </g>
+        <g stroke="var(--rule)" stroke-width="1">
+          <line x1="120" y1="38" x2="120" y2="352"/><line x1="232" y1="38" x2="232" y2="352"/>
+          <line x1="344" y1="38" x2="344" y2="352"/><line x1="456" y1="38" x2="456" y2="352"/>
+          <line x1="569" y1="38" x2="569" y2="352"/><line x1="681" y1="38" x2="681" y2="352"/>
+          <line x1="793" y1="38" x2="793" y2="352"/>
+        </g>
+        <line x1="329" y1="38" x2="329" y2="352" stroke="var(--ai)" stroke-width="2"/>
+
+        <g font-size="13" fill="var(--ink)" text-anchor="end">
+          <text x="108" y="58">家祖 平右エ門</text>
+          <text x="108" y="84">二代目 久兵衛</text>
+          <text x="108" y="110">三代目 久兵衛</text>
+          <text x="108" y="136">四代目 久兵衛</text>
+          <text x="108" y="162" fill="var(--ink-2)">　妻 登與</text>
+          <text x="108" y="188">五代目 久兵衛</text>
+          <text x="108" y="214">六代目 久兵衛</text>
+          <text x="108" y="240">七代目 久兵衛</text>
+          <text x="108" y="266">八代目 和明</text>
+          <text x="108" y="292">九代目 有美子</text>
+          <text x="108" y="330" fill="var(--ink-2)">永井家</text>
+        </g>
+
+        <g fill="var(--ai)">
+          <rect x="167" y="48" width="146" height="12" rx="2"/>
+          <rect x="261" y="74" width="151" height="12" rx="2"/>
+          <rect x="329" y="100" width="177" height="12" rx="2"/>
+          <rect x="387" y="126" width="164" height="12" rx="2"/>
+          <rect x="479" y="178" width="170" height="12" rx="2"/>
+          <rect x="555" y="204" width="121" height="12" rx="2"/>
+          <rect x="609" y="230" width="161" height="12" rx="2"/>
+          <rect x="674" y="256" width="159" height="12" rx="2"/>
+          <rect x="833" y="282" width="18" height="12" rx="2"/>
+        </g>
+        <rect x="423" y="154" width="199" height="8" rx="2" fill="var(--ai-line)"/>
+        <rect x="158" y="320" width="191" height="12" rx="2" fill="var(--ink-3)"/>
+        <line x1="853" y1="288" x2="868" y2="288" stroke="var(--ai)" stroke-width="2" marker-end="url(#bar-ar)"/>
+
+        <g fill="var(--paper)" stroke="var(--ai)" stroke-width="2.5">
+          <circle cx="167" cy="54" r="5"/><circle cx="261" cy="80" r="5"/><circle cx="329" cy="106" r="5"/>
+        </g>
+
+        <g font-size="12" fill="var(--ink-2)">
+          <text x="337" y="58">1721 – 1786</text>
+          <text x="418" y="84">1763 – 1830</text>
+          <text x="512" y="110">1793 – 1872</text>
+          <text x="557" y="136">1819 – 1892</text>
+          <text x="628" y="162">1835 – 1924 ・ 90才</text>
+          <text x="655" y="188">1860 – 1936</text>
+          <text x="682" y="214">1894 – 1948</text>
+          <text x="776" y="240">1918 – 1990</text>
+          <text x="670" y="266" text-anchor="end">1947 – 2018</text>
+          <text x="829" y="292" text-anchor="end">2018 社長就任</text>
+          <text x="355" y="330">1717 – 1802 ・ 大蓮寺への埋葬</text>
+        </g>
+      </svg>
+      <figcaption><b>三百年を、一枚で。</b>○印の三人（家祖・二代目・三代目）は、よそから髙山家に入った人です。家祖は創業の<b>7年前</b>に亡くなっており、三代目は<b>創業の年に生まれて</b>います。四代目の妻 登與は90年を生き、江戸の天保から大正まで届きました。そして永井家の帯は、創業の9年後に途切れています。</figcaption>
+    </figure>
     <ol class="lineage">
       <li class="origin">
         <span class="gen">本家</span>
@@ -438,6 +514,8 @@ footer p{margin:0 0 .5em}
           <li>四代目のほかに、<strong>二男 岡野伊三郎</strong>（無迷元心居士・昭和7年〈1932年〉6月12日没・行年90才。子に岡野彦三）、<strong>三男 根岸久五郎</strong>（大應玄機居士・明治7年〈1874年〉9月3日没・行年30才。一男は早世）、<strong>長女 髙山キワ</strong>（次の note 参照）、<strong>二女 髙山トシ</strong>（清心院即應淨觀大姉・安政5年〈1858年〉8月22日没・行年19才。墓石は「とみ」）
             <small>いずれも天保9年〜弘化2年（1838〜1845年）の生まれにあたり、後妻ノヨの子とみられる<span class="c y">要</span></small></li>
           <li>父のレジュメの「山田屋久兵衛（久平）」の<strong>「久平」は、この代の隠居名</strong>と思われます</li>
+          <li>観音寺の手洗石（天保3年・1832年、願主「南町 髙山」）は、<strong>この代の仕事</strong>にあたります。二代目は2年前に没しており、当時40才</li>
+          <li>嘉永4年（1851年）5月に四代目へ家督を譲り、以後<strong>21年を隠居として生きました</strong></li>
         </ul>
       </li>
       <li>
@@ -451,19 +529,23 @@ footer p{margin:0 0 .5em}
           <li>妻 <strong>登與（とよ）</strong>（<strong>飯能町 新井清平 女</strong>）天保6年（1835年）3月15日生、<strong>嘉永4年に17才で嫁ぐ</strong>——家督相続と同じ年です。大正13年（1924年）8月5日没・<strong>行年90才</strong>。厚心院徳應妙道大姉
             <small>90年を生きた人。六代目 和市が30才になるころまで健在だったことになる</small></li>
           <li>五代目は、この代の<strong>五男</strong>にあたります</li>
-          <li>観音寺の手洗石（天保3年・1832年、願主「南町 髙山」）は二代目か三代目、中院の墓（明治10年・1877年、「髙山久兵衛 建之」）は<strong>この代の仕事</strong>にあたります</li>
+          <li>中院の墓（明治10年・1877年、「髙山久兵衛 建之」）は、<strong>この代の仕事</strong>にあたります。当時58才</li>
         </ul>
       </li>
       <li>
         <span class="gen">五代目</span>
         <span class="name">髙山久兵衛<small>幼名 徳松</small></span>
-        <p class="life">昭和11年3月26日没・77才</p>
+        <p class="life">昭和11年（1936年）3月26日没・行年77才 → <strong>萬延元年（1860年）頃の生まれ</strong></p>
         <p class="kaimyo">久遠院徳山寿昌居士</p>
+        <ul>
+          <li>家系図では<strong>四代目の五男</strong>。上に四人の兄がいたことになりますが、その名はまだ読めていません<span class="c y">要</span></li>
+          <li>生まれた萬延元年は、<strong>行伝寺門前（出世横町）へ糸店を移した年</strong>でもあります</li>
+        </ul>
       </li>
       <li>
         <span class="gen">六代目</span>
         <span class="name">髙山久兵衛<small>幼名 和市</small></span>
-        <p class="life">昭和23年9月16日没・55才（父のレジュメでは昭和25年。戒名記録と墓碑銘は昭和23年）</p>
+        <p class="life">昭和23年（1948年）9月16日没・行年55才 → <strong>明治27年（1894年）頃の生まれ</strong><br><small class="muted">父のレジュメでは昭和25年没。祖父の戒名記録と父の墓碑銘は昭和23年</small></p>
         <p class="kaimyo">天眞院恭順和道居士</p>
         <ul>
           <li>家系図では<strong>五代目の三男</strong>。兄弟に四男 髙山重蔵、三女 髙山瀧尾ほか<span class="c y">要</span></li>
@@ -475,7 +557,7 @@ footer p{margin:0 0 .5em}
       <li>
         <span class="gen">七代目</span>
         <span class="name">髙山久兵衛<small>幼名 有和</small></span>
-        <p class="life">大正7年3月9日生 〜 平成2年11月2日没・享年72才</p>
+        <p class="life">大正7年（1918年）3月9日生 〜 平成2年（1990年）11月2日没・享年72才 —— <strong>六代目の長男</strong>（墓碑銘より）</p>
         <ul>
           <li>川越商業高校卒業後、東京の窪田商店で見習い。その後兵隊へ（幹部候補生で終戦大尉）</li>
           <li>昭和23年に襲名、昭和26年に株式会社化して代表取締役社長。堅実で整理整頓がしっかりしていた</li>
@@ -489,7 +571,7 @@ footer p{margin:0 0 .5em}
       <li>
         <span class="gen">八代目</span>
         <span class="name">髙山和明</span>
-        <p class="life">昭和22年（1947年）生 〜 平成30年（2018年）11月1日没・71才</p>
+        <p class="life">昭和22年（1947年）生 〜 平成30年（2018年）11月1日没・71才 —— <strong>七代目の長男</strong></p>
         <ul>
           <li>横浜鶴見の同業サクライ（株）に住込で修業してから入社</li>
           <li>川越青年会議所、日本JC経営開発委員会副委員長。手芸講習会でハマナカ・オリムパスなどを拡販</li>
@@ -818,7 +900,7 @@ footer p{margin:0 0 .5em}
           <tr><td>3</td><td>出世横丁・行伝寺門前</td><td>萬延元年（1860）、山久が糸店を移した先。南町のすぐ西</td></tr>
           <tr><td>4</td><td><strong>幸町（旧 南町）</strong></td><td><strong>永井喜右衛門の店。寛政5年（1793）、その店舗を借りて山久がはじまる。</strong>油庄寝具店・明文堂もこの界隈</td></tr>
           <tr><td>5</td><td>時の鐘<br><small class="muted">幸町15-2</small></td><td>創業の地のすぐそば</td></tr>
-          <tr><td>6</td><td>服部民俗資料館<br><small class="muted">幸町6-8</small></td><td>山田屋服部新助（山新）の家。服部安行氏はこの家系</td></tr>
+          <tr><td>6</td><td>服部民俗資料館<br><small class="muted">幸町6-8</small></td><td>山田屋服部新助（山新）の家。下駄・薬・傘を商った<span class="c y">要</span></td></tr>
           <tr><td>7</td><td>小林佐平家 文庫蔵<br><small class="muted">一番街</small></td><td>屋号 山田屋の呉服太物商。川越市指定文化財</td></tr>
           <tr><td>8</td><td><strong>山久 小売部</strong><br><small class="muted">仲町1-9</small></td><td>昭和31年に銀座通り商店街（現・大正浪漫夢通り）へ移した小売部。いまも営業中</td></tr>
           <tr><td>9</td><td>三芳野神社・川越城本丸御殿<br><small class="muted">郭町</small></td><td>永井喜右衛門が「河越連歌千句之写本」を奉納</td></tr>
@@ -905,6 +987,64 @@ footer p{margin:0 0 .5em}
     <p><strong>同じ字です。</strong>「髙」は「高」の異体字で、俗に<strong>はしご高</strong>と呼ばれます。江戸時代の毛筆や石の刻字には、この二つを<strong>書き分ける習慣がありませんでした</strong>。家系図の筆跡も、墓石の彫りも、どちらとも読めます。書き分けが問題になったのは明治以降——戸籍の手書きが活字に、さらにコンピュータの文字コードに移されたときのことです。</p>
     <p>いま髙山家と寺が使っているのは<strong>「髙」</strong>です。服部安行氏の論考も、大蓮寺の過去帳照合表「<strong>髙山家（永井家）墓所</strong>」も、長徳寺の碑の「<strong>納主　髙山久兵衛</strong>」も、すべて髙。<strong>このページも髙で統一しました。</strong>ただし江戸期の資料については、どちらで書かれていたかを写真から確かめたわけではありません。<span class="c y">要</span></p>
 
+    <h3>山田屋一門の広がり</h3>
+    <p>父のレジュメと明治34年の商家スゴロク、そして家系図を合わせると、本家「大山田」から分かれた店が何軒も見えてきます。<strong>山久はそのうちの一軒で、山仁はさらに山久から分かれた家です。</strong></p>
+    <figure class="plate scroll">
+      <svg viewBox="0 0 800 300" role="img" aria-label="呉服屋「大山田」から山久・山吉・山周・山新が分かれ、山久からさらに山仁が分かれた系統図。中院に墓がある山田屋一家は同じ山田屋だが関係は不明で、明治10年に山久が墓石を建てて守っている">
+        <defs>
+          <marker id="im-ar" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+            <path d="M0 0 L10 5 L0 10 z" fill="var(--ai)"/>
+          </marker>
+        </defs>
+
+        <rect x="285" y="16" width="170" height="46" rx="3" fill="var(--ai-soft)" stroke="var(--ai)" stroke-width="2"/>
+        <text x="370" y="38" text-anchor="middle" font-size="14" fill="var(--ai-deep)" font-weight="700">大山田</text>
+        <text x="370" y="54" text-anchor="middle" font-size="11.5" fill="var(--ai-deep)">呉服屋・高澤町・今はない</text>
+
+        <line x1="370" y1="62" x2="370" y2="84" stroke="var(--ai)" stroke-width="2"/>
+        <line x1="160" y1="84" x2="580" y2="84" stroke="var(--ai)" stroke-width="2"/>
+        <g stroke="var(--ai)" stroke-width="2">
+          <line x1="160" y1="84" x2="160" y2="100"/><line x1="300" y1="84" x2="300" y2="100"/>
+          <line x1="440" y1="84" x2="440" y2="100"/><line x1="580" y1="84" x2="580" y2="100"/>
+        </g>
+
+        <g fill="var(--surface)" stroke="var(--ai)" stroke-width="2">
+          <rect x="100" y="100" width="120" height="50" rx="3"/>
+        </g>
+        <g fill="var(--surface)" stroke="var(--rule-2)" stroke-width="2">
+          <rect x="240" y="100" width="120" height="50" rx="3"/>
+          <rect x="380" y="100" width="120" height="50" rx="3"/>
+          <rect x="520" y="100" width="120" height="50" rx="3"/>
+        </g>
+        <g text-anchor="middle">
+          <text x="160" y="120" font-size="14" fill="var(--ai)" font-weight="700">山久</text>
+          <text x="160" y="137" font-size="11" fill="var(--ink-2)">糸・髙山久兵衛</text>
+          <text x="300" y="120" font-size="13.5" fill="var(--ink)" font-weight="700">山吉</text>
+          <text x="300" y="137" font-size="11" fill="var(--ink-2)">呉服・山田屋吉右衛門</text>
+          <text x="440" y="120" font-size="13.5" fill="var(--ink)" font-weight="700">山周</text>
+          <text x="440" y="137" font-size="11" fill="var(--ink-2)">小間物</text>
+          <text x="580" y="120" font-size="13.5" fill="var(--ink)" font-weight="700">山新</text>
+          <text x="580" y="137" font-size="11" fill="var(--ink-2)">下駄・薬・傘／服部新助</text>
+        </g>
+
+        <line x1="160" y1="150" x2="160" y2="182" stroke="var(--ai)" stroke-width="2"/>
+        <text x="168" y="170" font-size="11" fill="var(--ink-2)">分家</text>
+        <rect x="100" y="182" width="120" height="50" rx="3" fill="var(--surface)" stroke="var(--ai)" stroke-width="2"/>
+        <text x="160" y="202" text-anchor="middle" font-size="14" fill="var(--ai)" font-weight="700">山仁</text>
+        <text x="160" y="219" text-anchor="middle" font-size="11" fill="var(--ink-2)">太物・髙山仁兵衛</text>
+
+        <path d="M455 39 L680 39 L680 182" fill="none" stroke="var(--rule-2)" stroke-width="2" stroke-dasharray="5 4"/>
+        <text x="566" y="32" text-anchor="middle" font-size="11" fill="var(--ink-3)">同じ山田屋の一家（関係は不明）</text>
+        <rect x="545" y="182" width="240" height="50" rx="3" fill="var(--surface)" stroke="var(--rule-2)" stroke-width="2"/>
+        <text x="665" y="202" text-anchor="middle" font-size="13.5" fill="var(--ink)" font-weight="700">中院の山田屋一家</text>
+        <text x="665" y="219" text-anchor="middle" font-size="11" fill="var(--ink-2)">山田屋長七 〜 斉藤姓・五代で絶家</text>
+
+        <path d="M100 125 L68 125 L68 266 L665 266 L665 236" fill="none" stroke="var(--ai)" stroke-width="2" marker-end="url(#im-ar)"/>
+        <text x="370" y="259" text-anchor="middle" font-size="11.5" fill="var(--ai-deep)" font-weight="700">明治10年（1877）、絶えた一家の墓石を建て、以来お守りしている</text>
+      </svg>
+      <figcaption>青が髙山家の系統です。山仁が山久の分家であることは家系図で確かめられました（三代目の長女キワの欄に「分家　髙山仁兵衛　初代」「山仁ノ祖」）。中院の山田屋一家は、祖父の口上書が「同じ山田屋の一家」と記すのみで、大山田とのつながり方は分かっていません。</figcaption>
+    </figure>
+
     <h3>商標は「入り山田」</h3>
     <p>会社の商標は、山形（∧）の中に「田」の字を入れた<strong>入り山田</strong>です。屋号「山田屋」を一文字で表したもので、「山久」の「久」ではありません。このページの見出しに置いた印も、それにならっています。</p>
     <figure class="photo zoomable">
@@ -972,9 +1112,10 @@ footer p{margin:0 0 .5em}
     <p>山久の創業は寛政五年（1793年）。永井喜右衛門が南町で店を構えていた寛政三年（1791年）の、わずか2年後です。<strong>髙山家が永井家から店舗を借りて糸商を始めたことは、服部安行氏の論考に明記されています。</strong>家に伝わる話ではなく、川越市文化財保護協会の会長が公刊した記述です。</p>
     <p>祖父・七代目が昭和61年に寺へ持参した口上書に、こう書かれています。</p>
     <div class="doc">
-      <p>大蓮寺様は<strong>うちの地先祖</strong>で、<strong>明文堂さんと油庄さんの間</strong>に今駐車場になって居りますが、<strong>そこがうちの方です</strong></p>
+      <p>大蓮寺様は<strong>うちの地先祖</strong>で、<strong>明文堂さんと油屋さんの間</strong>に今駐車場になって居りますが、<strong>そこがうちの方です</strong></p>
     </div>
-    <p><strong>油庄——会報が「永井喜右衛門の店の北隣り」と特定した、その家です。</strong>祖父の口上書（1986年）と会報（2002年）は互いを知りません。別々の理由で書かれた二つの紙が、南町の同じ一区画を指しています。<span class="c y">要</span></p>
+    <p>祖父が書いたのは「<strong>油屋</strong>」です。会報が「永井喜右衛門の店の北隣り」と特定したのは「<strong>油庄寝具店</strong>」。<strong>同じ店を指している可能性が高い</strong>——油庄は「油屋の庄右衛門」の略で、会報も北隣を「田中庄右衛門（現在の油庄寝具店）」と書いています。<strong>ただし祖父の字は「油屋」であって「油庄」ではありません。ここは書き換えずに残します。</strong><span class="c y">要</span></p>
+    <p>そのうえで言えば、祖父の口上書（1986年）と会報（2002年）は互いを知りません。<strong>別々の理由で書かれた二つの紙が、南町の同じ一区画を指しています。</strong></p>
     <p class="muted" style="font-size:14px">明文堂が油庄のどちら側にあったかが確認できれば、この一致は確定します。寛政三年の南町絵図面（西村奨氏蔵）か、古い住宅地図で調べられます。</p>
 
     <h3>永井家の墓を、髙山家が守り継いだ<span class="c k">確</span></h3>
@@ -1079,7 +1220,7 @@ footer p{margin:0 0 .5em}
     <div class="note">
       <p>しかし祖父の口上書は、三つの墓を書き分けていました。中院は「<strong>同じ山田屋の一家</strong>で、五代で子孫が絶えてしまったので山久で墓石を建ててお守りをしている」、観音寺は「<strong>昔の功績のあったお店の人</strong>らしく」。そして大蓮寺だけが「<strong>うちの地先祖</strong>」です。<strong>32年前に書かれた紙が、誤解を正す鍵を持っていました。</strong></p>
     </div>
-    <p>令和3年（2021年）7月7日、姉・有美子が調べて永井喜右衛門の名にたどり着きます。教えてくださったのは、服部民俗資料館の服部様と思われます。<span class="c y">要</span>没年、三芳野名勝図会に句が載ること、代々の髙山家が墓参りをしていたこと。7月11日、浩和は大蓮寺の過去帳照合表と突き合わせ、こう書き送りました。</p>
+    <p>令和3年（2021年）7月7日、<strong>姉・有美子が永井喜右衛門の名にたどり着きます。</strong>没年、三芳野名勝図会に句が載ること、代々の髙山家が墓参りをしていたこと。7月11日、浩和は大蓮寺の過去帳照合表と突き合わせ、こう書き送りました。</p>
     <div class="doc">
       <p>大蓮寺のお墓は山久に仕えていた無縁仏の人達ではなく、<strong>歴とした永井家一族の方々のように思える。。</strong></p>
     </div>
@@ -1138,7 +1279,6 @@ footer p{margin:0 0 .5em}
           <li>支援の具体的な中身（衣服、資金、助言など）は家に伝わる話で、史料の裏づけがない</li>
           <li>店舗を後に買い取ったかどうか。服部氏の論考と供養塔の刻文はいずれも「借りた」までを記す</li>
           <li>明文堂と油庄の位置関係は未確認</li>
-          <li>令和3年7月に姉へ永井家のことを伝えたのは、服部民俗資料館の服部様と思われる（未確認）</li>
         </ul>
       </div>
     </div>
@@ -1742,7 +1882,7 @@ footer p{margin:0 0 .5em}
       <li><b>五代目の回忌<span class="found">写真で判明</span></b><p>案内状の原本写真で「五十回忌」と確認できました。当日メモも「50回忌」。昭和11年没なら昭和61年は数え上は五十一回忌ですが、実務上は五十回忌と称したと分かります。</p></li>
       <li><b>護持会費「6万2千円」の意味<span class="found">写真で判明</span></b><p>交渉メモ8項の原本に「6万2千円の御通知を頂きましたが」とあり、別紙にも「中院 20,000（昨年まで）→ 62,000」と並んでいるので、中院から届いた値上げ通知の額と確定しました。祖父は他の3ヶ寺の額を示して「去年と同額の2万円」を願い出て、B案では昭和61年度護持会費として20,000円を納めています。</p></li>
       <li><b>移転を実行した日</b><p>10月24日案と、11月15日・21日案の2系統が残る。手書きの「24」は「26」とも読めるが、1986年10月26日は日曜で、書類の「金曜」と合うのは24日。</p></li>
-      <li><b>観音寺の所在と手洗石の三つの地名<span class="found">解決</span></b><p>レジュメは「石原町の観音寺」、手洗石の願主は「南町 髙山」、銘には「高澤町」。三つとも別のものを指していました。<strong>寺は石原町</strong>（観音寺・川越市石原町1-18-1、令和8年確認）。<strong>「南町」は山久の店の住所</strong>（糸巻き台紙の「川越市南町」）。そして<strong>「高澤町」は本家の山田屋の所在</strong>——家系図の家祖の欄に「川越高澤町　山田屋久兵衛」とあります。</p></li>
+      <li><b>観音寺の所在と手洗石の三つの地名<span class="found">解決</span></b><p>レジュメは「石原町の観音寺」、手洗石の願主は「南町 髙山」、銘には「高澤町」。三つとも別のものを指していました。<strong>寺は石原町</strong>（観音寺・川越市石原町1-18-1、令和8年確認）。<strong>「南町」は山久の店の住所</strong>（糸巻き台紙の「川越市南町」）。そして<strong>「高澤町」は本家の山田屋の所在</strong>——家系図の家祖の欄に「川越高澤町　施主　山田屋久兵衛」とあります。</p></li>
       <li><b>大蓮寺の「長井家」の一件</b><p>浩和の記憶にある「大蓮寺で長井家の墓と知らずに移してしまい、良くなかったので戻した」という経緯は、この36枚には見当たらない。昭和61年の口上書では大蓮寺を「うちの地先祖で、明文堂さんと油屋さんの間に今駐車場になっておりますがそこがうちの方です」と説明し、移転対象から外しているだけ。昭和61年より後の出来事か、別の書類にあると考えられる。</p></li>
       <li><b>「髙山久兵衛を髙山久平へ改名の方法」</b><p>祖父のメモの10項にある。家系図では「久平」は三代目・四代目の隠居名。<strong>先祖の名に戻そうとした</strong>ということになるが、その後どうなったのかは資料になし。</p></li>
       <li><b>読めなかった1枚<span class="found">写真で大筋が判明</span></b><p>裏から透けた鏡文字でしか読めなかった1枚は、表から撮った写真（2026年9月）で読めました。長徳寺檀徒総代会の「お知らせ」で、埋葬料を「左記の如く改正する事に決定」した旨の通知です。記の部分は「1 檀徒居士（夫婦）の埋葬料 10,000円／2 信徒居士（夫婦）7,000円（6,000とも読める）／3 信徒（信女）5,000円／4 墓地のみの埋葬料 5,000円／但し納骨堂は従来と同じ要領です」。日付は「平成五年五月」と読め、読み取り記録の「昭和五年」は誤読と考えられます。署名は「長徳寺 檀徒総代会」と住職名（江田庵典。当日メモの「江田大僧正（庵典）」と同じ人）。本文は走り書きで、前段の全文はまだ確定できません。<span class="c y">要</span></p>
@@ -1766,12 +1906,18 @@ footer p{margin:0 0 .5em}
 
     <div class="cols">
       <div>
-        <h4>姉・有美子に</h4>
+        <h4>姉・有美子に（ここが最初）</h4>
+        <p class="muted" style="font-size:14px;margin:.2em 0 .6em">九代目は姉です。家系図の現物も、令和3年に服部氏から聞いた話も、姉の手元にあります。<strong>外に聞きに行く前に、まずここで埋まるものを埋めます。</strong></p>
         <ul class="check">
-          <li>令和3年7月に永井家のことを教えてくれたのはどなたか（服部安行氏か）</li>
-          <li>家系図はいつ誰が作ったものか。九代目以降を書き足すか</li>
-          <li>宛名リストの名前に見覚えがあるか。何の法要のものか</li>
+          <li><b>家系図の現物をもう一度、分けて撮る。</b>四代目の一男〜四男、五代目より前の註記、三代目の妻の欄——まだ読めていないことの多くは、この一枚の中にある</li>
+          <li>家系図はいつ誰が作ったものか。父か、祖父か、もっと前か。九代目以降を書き足すか</li>
+          <li>家祖の生家「宿川岸」を聞いたことがあるか</li>
+          <li>四代目の母にあたる人が、系図のどこかに書かれていないか</li>
+          <li>令和3年に服部氏から聞いた話の中身。ほかに資料を見せてもらったか</li>
           <li>六代目の妻は「志け」か「志げ」か</li>
+          <li>宛名リストの名前に見覚えがあるか。何の法要のものか</li>
+          <li>山仁（髙山仁兵衛家）との今の付き合い</li>
+          <li>父のレジュメの P5〜P7、資料1〜3 が会社に残っていないか</li>
         </ul>
         <h4>服部安行氏（川越市文化財保護協会）に</h4>
         <ul class="check">
@@ -1903,7 +2049,7 @@ footer p{margin:0 0 .5em}
   <div class="wrap">
     <p class="eyebrow"><b>14</b>2026年</p>
     <h2>今の山久</h2>
-    <p>初代が糸屋として暖簾分けした山久は、今も川越で続いています。会社サイトの会社概要には「創業 寛政5年（1793年）、会社設立 昭和26年6月」とあり、この記録の年表と一致します。経営理念は「手づくりの楽しさ・あたたかさを伝え、くらしに彩りを届けます。」</p>
+    <p>寛政5年（1793年）に糸屋として暖簾分けした山久は、今も川越で続いています。会社サイトの会社概要には「創業 寛政5年（1793年）、会社設立 昭和26年6月」とあり、この記録の年表と一致します。経営理念は「手づくりの楽しさ・あたたかさを伝え、くらしに彩りを届けます。」</p>
     <img class="logo" alt="手芸の山久 Hand Craft Yamakyu のロゴ" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAARAAAABsCAYAAACine0bAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAydpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDcuMS1jMDAwIDc5LmIwZjhiZTkwLCAyMDIxLzEyLzE1LTIxOjI1OjE1ICAgICAgICAiPiA8cmRmOlJERiB4bWxuczpyZGY9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkvMDIvMjItcmRmLXN5bnRheC1ucyMiPiA8cmRmOkRlc2NyaXB0aW9uIHJkZjphYm91dD0iIiB4bWxuczp4bXA9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC8iIHhtbG5zOnhtcE1NPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvbW0vIiB4bWxuczpzdFJlZj0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL3NUeXBlL1Jlc291cmNlUmVmIyIgeG1wOkNyZWF0b3JUb29sPSJBZG9iZSBQaG90b3Nob3AgMjMuMiAoTWFjaW50b3NoKSIgeG1wTU06SW5zdGFuY2VJRD0ieG1wLmlpZDozRUQ4OTA3REI0N0IxMUVDODFEQjg2NDMxQTczNTM3QyIgeG1wTU06RG9jdW1lbnRJRD0ieG1wLmRpZDozRUQ4OTA3RUI0N0IxMUVDODFEQjg2NDMxQTczNTM3QyI+IDx4bXBNTTpEZXJpdmVkRnJvbSBzdFJlZjppbnN0YW5jZUlEPSJ4bXAuaWlkOjNFRDg5MDdCQjQ3QjExRUM4MURCODY0MzFBNzM1MzdDIiBzdFJlZjpkb2N1bWVudElEPSJ4bXAuZGlkOjNFRDg5MDdDQjQ3QjExRUM4MURCODY0MzFBNzM1MzdDIi8+IDwvcmRmOkRlc2NyaXB0aW9uPiA8L3JkZjpSREY+IDwveDp4bXBtZXRhPiA8P3hwYWNrZXQgZW5kPSJyIj8+kDIhGAAAXOxJREFUeNrs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">
     <ul class="links">
       <li><a href="https://yama9.com/" target="_blank" rel="noopener">手芸の山久（yama9.com）</a><p>本社は川越の卸団地（川越バンテアン）。ソーイング材料、毛糸、手芸材料の卸・小売・メーカー。約1万点。平成12年に楽天市場へ出店した「手芸の山久」の流れ。</p></li>
@@ -1927,16 +2073,25 @@ footer p{margin:0 0 .5em}
       <dt>無縁墓（無縁仏）</dt><dd>継承者がいなくなった墓・故人。山久が縁もない他家の無縁墓を100年以上守り続けていた点が特異。</dd>
       <dt>易断</dt><dd>日取りや方位の吉凶を占うこと。改葬の可否と着工時期の判断に使われている。</dd>
       <dt>大安</dt><dd>六曜の一つ。何をするにも吉とされる日。</dd>
-      <dt>暖簾分け</dt><dd>奉公人が独立する際、主家が屋号の使用を許すこと。初代は「主家と競合しない業種を選ぶ」条件で糸屋になった。</dd>
+      <dt>暖簾分け</dt><dd>奉公人が独立する際、主家が屋号の使用を許すこと。髙山家は「主家と競合しない業種を選ぶ」条件で糸屋になった（寛政5年・1793年）。</dd>
       <dt>太物</dt><dd>綿織物・麻織物のこと。絹を扱う呉服に対する語。山仁は太物問屋。</dd>
       <dt>塔婆</dt><dd>供養のために墓に立てる細長い板。昭和61年の移転では8本または13本を立てた。</dd>
+      <dt>襲名（しゅうめい）</dt><dd>当主が代々同じ名を継ぐこと。屋号と当主名が商売の名義であり、町の人別帳や寺の檀家帳もその名で管理されたため、名を継ぐことで一切が切れずに済んだ。髙山家は「久兵衛」、永井家は「喜右ヱ門」。</dd>
+      <dt>隠居名</dt><dd>家督を譲ったあとに名のる名。髙山家では「久平」（三代目・四代目で確認）。</dd>
+      <dt>家督相続</dt><dd>当主の地位と家の財産・家業を継ぐこと。四代目は嘉永4年（1851年）5月、32才で相続している。</dd>
+      <dt>分家</dt><dd>本家から分かれて新しく構えた家。山仁（髙山仁兵衛家）は山久の分家で、家系図に「分家　髙山仁兵衛　初代」「山仁ノ祖」とある。</dd>
+      <dt>過去帳</dt><dd>寺が檀家の死者の戒名・没年月日・続柄を記した帳面。続柄はその時の当主を基準に書かれるため、当主名が家の名として繰り返し現れる。</dd>
+      <dt>位号（いごう）</dt><dd>戒名の末尾につく格式の表示。男性は居士・信士、女性は大姉・信女、子どもは童子・童女。浄土宗の永井家では、当主に居士、その妻や母に大姉が付いている。</dd>
+      <dt>行年・享年</dt><dd>いずれも亡くなったときの年齢。この記録では資料の表記のまま写しています。多くは数え年で、生年は「没年－行年＋1」で逆算しています。</dd>
+      <dt>地先祖参り</dt><dd>家移り先の墓参りをすること。川越に残る習わしで、服部安行氏が『川越の文化財』第138号（令和3年）に書いておられる。髙山家と永井家の関係がこれにあたる。</dd>
+      <dt>異体字</dt><dd>同じ字の別の書きかた。「髙」と「高」がその例で、江戸時代の毛筆や石の刻字には書き分けの習慣がなかった。</dd>
     </dl>
   </div>
 </section>
 
 <footer>
   <div class="wrap">
-    <p>もとになった読み取り記録：2026年8月31日作成（髙山浩和撮影の紙資料36枚をAIが読み取って整理したもの）。このページは2026年9月2日に作成。</p>
+    <p>もとになった読み取り記録：2026年8月31日作成（髙山浩和撮影の紙資料36枚をAIが読み取って整理したもの）。このページは2026年9月2日に作成し、<b>2026年9月20日に更新</b>しました（家系図の接写で二代目〜四代目が判明、山仁が分家と確定、永井喜右ヱ門も襲名と判明）。</p>
     <p>写真からの読み取りであり、原本の翻刻ではありません。金額・年号・戒名を引用するときは原本にあたってください。</p>
     <a class="totop" href="#top">ページの先頭へ</a>
   </div>
